@@ -383,16 +383,17 @@ ul li {
 
 /* Custom styles*/
 
-/* Estilo para centrar y hacer el código QR responsive */
+/* Estilo mejorado para centrar y hacer el código QR responsive */
 .qr-container {
     text-align: center;
     margin-top: 20px;
 }
 
 .qr-container img {
-    max-width: 150px; /* Controla el tamaño máximo del QR */
-    width: 100%; /* Hace que se adapte al tamaño del contenedor */
+    width: 150px;  /* Tamaño fijo máximo */
+    max-width: 100%; /* Se ajusta en pantallas pequeñas */
     height: auto;
     display: block;
     margin: 0 auto;
 }
+
