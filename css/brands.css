@@ -31,6 +31,13 @@
 /* Brand-Specific Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Guarda mi contacto */
+.button-guarda-mi-contacto {
+    --button-text: #ffffff;
+    --button-background: #2457f5;
+    --button-border: 1px solid #FFFFFF;
+}
+
 /* Default */
 .button.button-default {
 	--button-text:#ffffff;
