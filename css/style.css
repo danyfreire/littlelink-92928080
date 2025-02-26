@@ -407,7 +407,7 @@ ul li {
 /* Estilo para el logo de Palozebra Creative */
 .logo {
     display: block;
-    width: 25rem; /* 240px, ajustable según necesidad */
+    width: 25rem; /* ajustable según necesidad */
     height: auto;
     max-width: 100%;
     margin: 0 auto var(--spacing-l) auto;
