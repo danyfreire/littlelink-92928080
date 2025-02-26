@@ -404,3 +404,24 @@ ul li {
 }
 
 
+/* Estilo para el logo de Palozebra Creative */
+.logo {
+    display: block;
+    width: 10rem; /* 160px, ajustable según necesidad */
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto var(--spacing-l) auto;
+    object-fit: contain;
+}
+
+/* Versión para el modo oscuro */
+:root.theme-dark .logo {
+    filter: brightness(0) invert(1); /* Hace que se vea mejor en fondo oscuro */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 34.375rem) { /* 550px */
+    .logo {
+        width: 8rem; /* Reduce el tamaño en pantallas pequeñas */
+    }
+}
