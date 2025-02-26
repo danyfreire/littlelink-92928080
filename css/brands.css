@@ -38,6 +38,12 @@
     --button-border: 1px solid #FFFFFF;
 }
 
+/* PaloZebra */
+.button-palozebra {
+    --button-text: #ffffff;
+    --button-background: #2e8a15;
+}
+
 /* Default */
 .button.button-default {
 	--button-text:#ffffff;
@@ -610,13 +616,4 @@
 	--button-text:#ffffff;
 	--button-background:#0B5CFF;
   --button-border:1px solid #FFFFFF;
-}
-
-
-/* Custom */
-
-/* PaloZebra */
-.button-palozebra {
-    --button-text: #ffffff;
-    --button-background: #2e8a15;
 }
