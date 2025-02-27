@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>amazon-music</title>
+	<defs>
+		<image  width="22" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQAgMAAABvg2e1AAAAAXNSR0IB2cksfwAAAAlQTFRFAAAA/////v7+HKbOgwAAAAN0Uk5TAP//RFDWIQAAADtJREFUeJxjZGBg/c3AwAijHI7+/wOkHI/wvwFT8m8+wKiAj0f4/xhAKAcYJWAIFkRVCTQFrB1qGLINAFS5JjF9pam9AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer 2" href="#img1" x="1" y="4"/>
+</svg>
