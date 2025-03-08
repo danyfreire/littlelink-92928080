@@ -1,176 +1,82 @@
 <!DOCTYPE html>
+<html class="theme-light" lang="es"> <!-- Español como idioma principal -->
 
-<!-- 
-  To change the theme, change the class on the html tag below to one of:
-  - theme-auto: Automatically switches based on user's system preferences
-  - theme-light: Forces light theme
-  - theme-dark: Forces dark theme
--->
-
-<html class="theme-light" lang="en"> <!-- Update`class="theme-auto" with your preference -->
-
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         
-    <!-- Page Title - Change this to your name/brand (50-60 characters recommended) -->
     <title>Palozebra | Diseño, Web & Audio</title>
-    <link rel="icon" type="image/x-icon" href="/images/avatar.png"> <!-- Update this with your own favicon -->
-    
-    <!-- Meta Description - Write a description (150-160 characters recommended) -->
+    <link rel="icon" type="image/x-icon" href="/images/avatar.png">
+
     <meta name="description" content="Palozebra es un estudio creativo especializado en diseño, branding, desarrollo web y producción audiovisual. Descubre nuestro trabajo.">
+    <meta name="keywords" content="Palozebra, diseño gráfico, branding, desarrollo web, producción audiovisual, estudio creativo, Guayaquil">
     
-     <!-- 🔑 Meta Keywords -->
-     <meta name="keywords" content="Palozebra, diseño gráfico, branding, desarrollo web, producción audiovisual, estudio creativo, Guayaquil">
-    
-     <!-- 📌 Canonical URL -->
     <link rel="canonical" href="https://92928080.xyz">
-    
-    <!-- ✍️ Author -->
     <meta name="author" content="Palozebra Creative">
     
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/brands.css">
 
-  </head>
+</head>
 
 <body>
 
     <div class="container">
         <div class="column">
 
-            <!-- 
-              By default, the Avatar is rounded. Use the following:
-              - avatar--rounded: Automatically rounds the image
-              - avatar--soft: Slightly rounds the image
-              - avatar--none: Removes any rounding
-
-              Be sure to replace the src with your own image path and update the alt text
-            -->
             <img class="logo" src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="LittleLink">
 
-            <!-- Replace with your name or brand -->
-            <!-- <h1>
-              <div>PaloZebra</div>
-            </h1> -->
+            <!-- Descripción -->
+            <p id="descripcion">Estudio creativo enfocado en branding, diseño digital y producción audiovisual. Explora nuestro trabajo en diseño, web y audio.</p>
 
-            <!-- Add a short description about yourself or your brand -->
-             <!-- Descripción -->
-             <p>Estudio creativo enfocado en branding, diseño digital y producción audiovisual. Explora nuestro trabajo en diseño, web y audio.</p>
+            <!-- Botón para cambiar de idioma -->
+            <button onclick="cambiarIdioma('es')">🇪🇸 Español</button>
+            <button onclick="cambiarIdioma('en')">🇬🇧 English</button>
 
-            <!-- All your buttons go here -->
+            <!-- Botones de navegación -->
             <div class="button-stack" role="navigation">
-
-                <a class="button button-default" href="https://92928080.xyz/design" target="_blank" rel="noopener" role="button">
-                    <img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Design Icon">Diseño
+                <a class="button button-default" href="https://92928080.xyz/design" target="_blank">
+                    <img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Design Icon">
+                    <span id="diseno">Diseño</span>
                 </a>
 
-                <a class="button button-default" href="https://92928080.xyz/music" target="_blank" rel="noopener" role="button">
-                    <img class="icon" aria-hidden="true" src="images/icons/pz-music.svg" alt="Design Icon">Música
+                <a class="button button-default" href="https://92928080.xyz/music" target="_blank">
+                    <img class="icon" aria-hidden="true" src="images/icons/pz-music.svg" alt="Music Icon">
+                    <span id="musica">Música</span>
                 </a>
-                  
-          
-              <!-- 📲 Redes Sociales -->
-              <!-- <h2>Redes Sociales</h2> 
-               <a class="button button-x" href="https://x.com/dany_freire" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/x.svg" alt="X Logo">X (Twitter)
-              </a>
-              <a class="button button-instagram" href="https://www.instagram.com/danyfreirebonifacini/" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/instagram.svg" alt="Instagram Logo">Instagram
-              </a>
-            
-              <a class="button button-tiktok" href="https://www.tiktok.com/@8925elm" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/tiktok.svg" alt="TikTok Logo">TikTok
-              </a>-->
+            </div>
 
-            <!-- YouTube Alt -->
-            <!-- <a class="button button-yt-alt" href="https://www.youtube.com/@danyfreireb" target="_blank" rel="noopener" role="button">
-                <img class="icon" aria-hidden="true" src="images/icons/youtube-alt.svg" alt="YouTube Logo">YouTube
-            </a> -->
-
-
-              <!-- <a class="button button-linkedin" href="#" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn
-              </a> -->
-              <!-- <a class="button button-linked" href="https://www.linkedin.com/in/dany-freire-bonifacini" target="_blank" rel="noopener" role="button">
-                <img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Logo">LinkedIn
-            </a> --> 
-            
-            <!-- Negocios-->
-            <!-- <h2>Negocios</h2> -->
-            
-            <!-- PaloZebra -->
-<!-- <a class="button button-palozebra" href="https://www.92928080.xyz" target="_blank" rel="noopener" role="button">
-    <img class="icon" aria-hidden="true" src="images/icons/palozebra-svg.svg" alt="PaloZebra icon">
-    PaloZebra
-</a> -->
-
-              <!-- ✉️ Contacto -->
-              <h2>Contacto</h2>
-     
-         
-              <a class="button button-whatsapp" href="https://api.whatsapp.com/send?phone=593992182204&text=Hola!" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">WhatsApp
-              </a>
-              <a class="button button-default" href="mailto:dany.freire.b@gmail.com" target="_blank" rel="noopener" role="button">
-                <img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">Email
-              </a>
-
-              <!-- <a class="button button-email" href="mailto:dany.freire.b@gmail.com" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/email.svg" alt="Email Icon">Email
-              </a> -->
-              <!-- <a class="button button-telegram" href="https://t.me/+593992182204" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/telegram.svg" alt="Telegram Logo">Telegram
-              </a> -->
-
-               <!-- Guarda mi contacto -->
-            <a class="button button-guarda-mi-contacto" href="https://23788080.xyz/files/danyfreire.vcf" target="_blank" rel="noopener" role="button">
-                <img class="icon" aria-hidden="true" src="images/icons/littlelink.svg" alt="Guarda mi contacto icon">Guarda mi contacto
+            <!-- Contacto -->
+            <h3 id="contacto">Contacto</h3>
+            <a class="button button-whatsapp" href="https://api.whatsapp.com/send?phone=593992182204&text=Hola!" target="_blank">
+                <img class="icon" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">
+                <span id="whatsapp">WhatsApp</span>
+            </a>
+            <a class="button button-default" href="mailto:dany.freire.b@gmail.com" target="_blank">
+                <img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">
+                <span id="email">Email</span>
             </a>
 
-               <!-- Código QR para guardar contacto -->
+            <!-- Guarda mi contacto -->
+            <a class="button button-guarda-mi-contacto" href="https://23788080.xyz/files/danyfreire.vcf" target="_blank">
+                <img class="icon" aria-hidden="true" src="images/icons/littlelink.svg" alt="Guarda mi contacto icon">
+                <span id="guardar">Guarda mi contacto</span>
+            </a>
+
             <div class="qr-container">
-                <p>Escanea mi contacto:</p>
+                <p id="escanea">Escanea mi contacto:</p>
                 <img class="qr-image" src="images/qr-vcard.png" alt="Código QR vCard">
             </div>
-          
-              <!-- 💰 Finanzas y Soporte -->
-              <!-- <h2>Apoya mi Trabajo</h2>
-              <a class="button button-patreon" href="#" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/patreon.svg" alt="Patreon Logo">Patreon
-              </a>
-              <a class="button button-paypal" href="#" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/paypal.svg" alt="PayPal Logo">PayPal
-              </a>
-              <a class="button button-ko-fi" href="#" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/ko-fi.svg" alt="Ko-fi Logo">Ko-fi
-              </a> -->
-          
-              <!-- 🔧 Herramientas y Repositorios -->
-              <!-- <h2>Herramientas & Repositorios</h2>
-              <a class="button button-notion" href="#" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/notion.svg" alt="Notion Logo">Notion
-              </a>
-              <a class="button button-obsidian" href="#" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/obsidian.svg" alt="Obsidian Logo">Obsidian
-              </a>
-              <a class="button button-github" href="#" target="_blank" rel="noopener" role="button">
-                  <img class="icon" src="images/icons/github.svg" alt="GitHub Logo">GitHub
-              </a> -->
-          
-          </div>
-          
-        
-      <!-- Feel free to add your own footer information, including updating `privacy.html` to reflect how your LittleLink fork is set up -->
-      <footer>
-         <p>© 2025 Palozebra by <a href="https://www.23788080.xyz">Dany Freire</a></p>
-      </footer>
-    
-    </div>
-  </div>
 
+            <footer>
+                <p>© 2025 Palozebra by <a href="https://www.23788080.xyz">Dany Freire</a></p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="lang.js"></script> <!-- Script de traducción -->
 </body>
 
 </html>
