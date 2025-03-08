@@ -427,9 +427,13 @@ ul li {
 }
 
 .language-switcher {
-    text-align: center; /* Centrado */
-    font-size: 12px; /* Tamaño pequeño */
-    margin-bottom: 10px; /* Espacio debajo */
+    text-align: center;
+    font-size: 12px; /* Tamaño más pequeño */
+    margin-bottom: 5px; /* Menos espacio debajo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .lang-btn {
@@ -438,11 +442,18 @@ ul li {
     color: #666;
     font-size: 12px;
     cursor: pointer;
-    padding: 0 5px;
+    padding: 0;
     transition: color 0.3s;
+    font-weight: normal; /* Evita que se vea en negrita */
 }
 
 .lang-btn:hover {
     color: black;
-    font-weight: bold;
+    font-weight: normal;
+}
+
+.separator {
+    color: #aaa;
+    font-size: 12px;
+    padding: 0 3px;
 }
