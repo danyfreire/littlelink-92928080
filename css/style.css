@@ -427,21 +427,18 @@ ul li {
 }
 
 .language-switcher {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    display: flex;
-    gap: 10px;
-    font-size: 14px;
+    text-align: center; /* Centrado */
+    font-size: 12px; /* Tamaño pequeño */
+    margin-bottom: 10px; /* Espacio debajo */
 }
 
 .lang-btn {
     background: none;
     border: none;
-    color: #555;
-    font-size: 14px;
+    color: #666;
+    font-size: 12px;
     cursor: pointer;
-    padding: 2px 5px;
+    padding: 0 5px;
     transition: color 0.3s;
 }
 
