@@ -427,9 +427,9 @@ ul li {
 }
 
 .language-switcher {
-    display: inline-flex; /* Mantiene los elementos en una línea */
-    justify-content: center; /* Centra el contenido */
-    align-items: center; /* Alineación vertical */
+    display: inline-flex; /* Mantiene los botones en una sola línea */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Asegura alineación vertical */
     font-size: 12px; /* Tamaño pequeño */
     margin-bottom: 10px; /* Espacio debajo */
     gap: 6px; /* Espaciado entre elementos */
