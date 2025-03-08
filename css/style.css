@@ -427,13 +427,13 @@ ul li {
 }
 
 .language-switcher {
-    display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Asegura alineación vertical */
-    gap: 8px; /* Espacio entre los elementos */
+    display: inline-flex; /* Mantiene los elementos en una línea */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Alineación vertical */
     font-size: 12px; /* Tamaño pequeño */
-    margin-bottom: 5px; /* Espacio debajo */
-    white-space: nowrap; /* Evita que se dividan en dos líneas */
+    margin-bottom: 10px; /* Espacio debajo */
+    gap: 6px; /* Espaciado entre elementos */
+    white-space: nowrap; /* Evita saltos de línea */
 }
 
 .lang-btn {
@@ -444,15 +444,15 @@ ul li {
     cursor: pointer;
     padding: 0;
     transition: color 0.3s;
-    font-weight: normal; /* No en negrita */
+    font-weight: normal; /* Evita negrita */
 }
 
 .lang-btn:hover {
     color: black;
-    font-weight: normal;
 }
 
 .separator {
     color: #aaa;
     font-size: 12px;
+    margin: 0 5px; /* Ajuste de espacio del separador */
 }
