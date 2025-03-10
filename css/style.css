@@ -526,8 +526,8 @@ ul li {
     margin: 20px auto; /* Asegura margen superior e inferior */
     padding: 15px;
     background: #ffffff; /* Fondo claro */
-    /* border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */ /* Sombra sutil */
+    border-radius: 10px;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */ /* Sombra sutil */
 }
 
 
