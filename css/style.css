@@ -525,7 +525,7 @@ ul li {
     max-width: 600px; /* Ajusta el ancho del carrusel */
     margin: 20px auto; /* Asegura margen superior e inferior */
     padding: 15px;
-    background: #f9f9f9; /* Fondo claro */
+    background: #ffffff; /* Fondo claro */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
@@ -534,7 +534,7 @@ ul li {
 
 .swiper {
     width: 100%;
-    height: 380px; /* Ajusta la altura de las tarjetas */
+    height: 300px; /* Ajusta la altura de las tarjetas */
 }
 
 .logo-card {
