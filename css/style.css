@@ -9,6 +9,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
 	font-size:16px;
+}
 
 /* Grid
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -226,7 +227,7 @@ a:hover {
 .button:hover, button:hover {
     background: linear-gradient(135deg, #2E7D32, #D68F00); /* Tonos más oscuros para efecto */
     color: white;
-}
+
 	display:inline-flex;
 	align-items:center;
 	justify-content:center;
