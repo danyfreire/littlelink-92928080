@@ -19,7 +19,10 @@
         "tiendaAmazon": "🛒 Tienda Amazon",
         "catalogo_heartdesigns": "📖 Catálogo Heart Designs",
         "descripcionDiseno": "Servicios de diseño gráfico e identidad visual",
-        "descripcion-logo-heartdesigns": "Logo inspirado en la mascota del dueño para marca de camisetas"
+        "descripcion-logo-heartdesigns": "Logo inspirado en la mascota del dueño para marca de camisetas",
+        "descripcion-logo-mujerbonita": "Logo para empresa de alquiler de vestidos",
+        "descripcion-logo-daletouch": "Logo para empresa de Consultoría de Transformación Digital"
+    
         
     },
     "en": {
@@ -42,7 +45,9 @@
         "tiendaAmazon": "🛒 Amazon Store",
         "catalogo_heartdesigns": "📖 Heart Designs Catalog",
         "descripcionDiseno": "Graphic design and visual identity services",
-        "descripcion-logo-heartdesigns": "Logo inspired by the owner's pet for a T-shirt brand"
+        "descripcion-logo-heartdesigns": "Logo inspired by the owner's pet for a T-shirt brand",
+        "descripcion-logo-mujerbonita": "Dress rental business logo",
+        "descripcion-logo-daletouch": "Logo for a Digital Transformation Consulting company"
 
 
     }
