@@ -1,0 +1,36 @@
+{
+    "es": {
+        "descripcion": "Estudio creativo enfocado en branding, diseño digital y producción audiovisual. Explora nuestro trabajo en diseño, web y audio.",
+        "diseno": "🎨 Diseño",
+        "produccion": "🎧 Producción Musical & Distribución",
+        "web": "💻 Desarrollo Web",
+        "marketing": "📧 Marketing Digital",
+        "creatividad": "💡 Creatividad & Conceptos",
+        "contacto": "📞 Contacto",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "guardar": "Guarda mi contacto",
+        "escanea": "Escanea mi contacto:",
+        "chainJournal": "📖 Chain Journal (Amazon)",
+        "chainJournalLink": "https://a.co/d/6GkueOL",
+        "identidadVisual": "🎨 Identidad Visual",
+        "ropa": "👕 Ropa y Accesorios"
+    },
+    "en": {
+        "descripcion": "Creative studio focused on branding, digital design, and audiovisual production. Explore our work in design, web, and audio.",
+        "diseno": "🎨 Design",
+        "produccion": "🎧 Music Production & Distribution",
+        "web": "💻 Web Development",
+        "marketing": "📧 Digital Marketing",
+        "creatividad": "💡 Creativity & Concepts",
+        "contacto": "📞 Contact",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "guardar": "Save my contact",
+        "escanea": "Scan my contact:",
+        "chainJournal": "📖 Chain Journal (Amazon)",
+        "chainJournalLink": "https://a.co/d/1wwYW1J",
+        "identidadVisual": "🎨 Visual Identity",
+        "ropa": "👕 Clothing and Accessories"
+    }
+}

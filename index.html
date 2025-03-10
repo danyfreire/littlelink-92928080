@@ -4,11 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+    
     <title>Palozebra | Diseño, Web & Audio</title>
     <link rel="icon" type="image/x-icon" href="/images/avatar.png">
 
     <meta name="description" content="Palozebra es un estudio creativo especializado en diseño, branding, desarrollo web y producción audiovisual. Descubre nuestro trabajo.">
+    
+    <meta property="og:locale" content="es_ES" />
+    
+    <meta property="og:locale:alternate" content="en_US" />
+
     <meta name="keywords" content="Palozebra, diseño gráfico, branding, desarrollo web, producción audiovisual, estudio creativo, Guayaquil">
     
     <link rel="canonical" href="https://92928080.xyz">
@@ -18,42 +23,87 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/brands.css">
 
+    <!-- SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>
 
 <body>
-<!-- Selector de idioma más discreto -->
-
     <div class="container">
         <div class="column">
-
-            <img class="logo" src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="LittleLink">
-
-            <p class="language-switcher">
-                <a href="#" onclick="cambiarIdioma('es')" class="lang-link">Español</a> | 
-                <a href="#" onclick="cambiarIdioma('en')" class="lang-link">English</a>
-            </p>
-
-
-
-            <!-- Descripción -->
-            <p id="descripcion">Estudio creativo enfocado en branding, diseño digital y producción audiovisual. Explora nuestro trabajo en diseño, web y audio.</p>
-
+            <img class="logo" src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="Palozebra">
             
-
-
-            <!-- Botones de navegación -->
+            <p class="language-switcher"> 
+                <a href="#" onclick="cambiarIdioma('es'); return false;" class="lang-link">Español</a> | 
+                <a href="#" onclick="cambiarIdioma('en'); return false;" class="lang-link">English</a>
+            </p>
+            
+            <!-- Descripción -->
+            <p id="descripcion">Palozebra es un estudio creativo en Guayaquil, Ecuador, que trabaja con clientes locales e internacionales en diseño, música, web y marketing digital.</p>
+            
+            <!-- Botones principales -->
             <div class="button-stack" role="navigation">
-                <a class="button button-default" href="https://92928080.xyz/design" target="_blank">
-                    <img class="icon" aria-hidden="true" src="images/icons/generic-website.svg" alt="Design Icon">
-                    <span id="diseno">Diseño</span>
-                </a>
-
-                <a class="button button-default" href="https://92928080.xyz/music" target="_blank">
-                    <img class="icon" aria-hidden="true" src="images/icons/pz-music.svg" alt="Music Icon">
-                    <span id="musica">Música</span>
-                </a>
+                <button class="button button-default accordion" id="diseno">🎨 Diseño</button>
+                <div class="panel">
+                    <p>Servicios de diseño gráfico e identidad visual</p>
+                    <ul>
+                        <li>
+                            <a id="chainJournal" href="https://a.co/d/6GkueOL" target="_blank">📖 Chain Journal (Amazon)</a>
+                        </li>
+                        <li>
+                            <a href="#">🎨 Identidad Visual</a>
+                        
+                        
+                            <!-- Contenedor del carrusel (siempre visible) -->
+                            <div class="showcase-container">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/300x200" alt="Logo 1">
+                                            <p>Descripción del Logo 1</p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/300x200" alt="Logo 2">
+                                            <p>Descripción del Logo 2</p>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="https://placehold.co/300x200" alt="Logo 3">
+                                            <p>Descripción del Logo 3</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <a id="ropa" href="https://www.amazon.com/stores/page/5D0B9854-CE0E-4990-84F8-37FB9ED5E659" target="_blank">👕 Ropa</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button class="button button-default accordion" id="produccion">🎧 Producción Musical & Distribución</button>
+                <div class="panel">
+                    <p>Producción musical, mezcla, distribución y marketing para artistas.</p>
+                    <p>Proyectos activos: Luciérnaga, Los Smokings, Rodney Durán, Dany Freire.</p>
+                </div>
+                
+                <button class="button button-default accordion" id="web">💻 Desarrollo Web</button>
+                <div class="panel">
+                    <p>Desarrollo de sitios web personalizados con Joomla, HTML y CSS.</p>
+                </div>
+                
+                <button class="button button-default accordion" id="marketing">📧 Marketing Digital</button>
+                <div class="panel">
+                    <p>Estrategia y campañas de email marketing.</p>
+                </div>
+                
+                <button class="button button-default accordion" id="creatividad">💡 Creatividad & Conceptos</button>
+                <div class="panel">
+                    <p>Storytelling, naming y consultoría en creatividad aplicada.</p>
+                </div>
             </div>
-
+            
             <!-- Contacto -->
             <h3 id="contacto">Contacto</h3>
             <a class="button button-whatsapp" href="https://api.whatsapp.com/send?phone=593992182204&text=Hola!" target="_blank">
@@ -64,26 +114,34 @@
                 <img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">
                 <span id="email">Email</span>
             </a>
-
-            <!-- Guarda mi contacto -->
+            
             <a class="button button-guarda-mi-contacto" href="https://23788080.xyz/files/danyfreire.vcf" target="_blank">
                 <img class="icon" aria-hidden="true" src="images/icons/littlelink.svg" alt="Guarda mi contacto icon">
                 <span id="guardar">Guarda mi contacto</span>
             </a>
-
+            
             <div class="qr-container">
                 <p id="escanea">Escanea mi contacto:</p>
                 <img class="qr-image" src="images/qr-vcard.png" alt="Código QR vCard">
             </div>
-
+            
             <footer>
                 <p>© 2025 Palozebra by <a href="https://www.23788080.xyz">Dany Freire</a></p>
             </footer>
-
         </div>
     </div>
+    
+    <script src="lang.js"></script>
+    <script src="accordion.js"></script>
+    <!-- SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+    });
+    </script>
 
-    <script src="lang.js"></script> <!-- Script de traducción -->
 </body>
 
 </html>

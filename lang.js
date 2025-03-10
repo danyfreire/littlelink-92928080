@@ -1,43 +1,54 @@
-const textos = {
-    "es": {
-        "descripcion": "Estudio creativo enfocado en branding, diseño digital y producción audiovisual. Explora nuestro trabajo en diseño, web y audio.",
-        "diseno": "Diseño",
-        "musica": "Música",
-        "contacto": "Contacto",
-        "whatsapp": "WhatsApp",
-        "email": "Email",
-        "guardar": "Guarda mi contacto",
-        "escanea": "Escanea mi contacto:"
-    },
-    "en": {
-        "descripcion": "Creative studio focused on branding, digital design, and audiovisual production. Explore our work in design, web, and audio.",
-        "diseno": "Design",
-        "musica": "Music",
-        "contacto": "Contact",
-        "whatsapp": "WhatsApp",
-        "email": "Email",
-        "guardar": "Save my contact",
-        "escanea": "Scan my contact:"
+let textos = {};
+
+// Función para cargar traducciones desde un JSON externo
+async function cargarTraducciones() {
+    try {
+        const response = await fetch("traducciones.json"); // Cargar JSON de traducciones
+        textos = await response.json();
+        aplicarIdioma(); // Aplicar el idioma guardado o detectado
+    } catch (error) {
+        console.error("Error cargando las traducciones:", error);
     }
-};
-
-// Función para cambiar de idioma dinámicamente
-function cambiarIdioma(idioma) {
-    document.getElementById('descripcion').innerText = textos[idioma].descripcion;
-    document.getElementById('diseno').innerText = textos[idioma].diseno;
-    document.getElementById('musica').innerText = textos[idioma].musica;
-    document.getElementById('contacto').innerText = textos[idioma].contacto;
-    document.getElementById('whatsapp').innerText = textos[idioma].whatsapp;
-    document.getElementById('email').innerText = textos[idioma].email;
-    document.getElementById('guardar').innerText = textos[idioma].guardar;
-    document.getElementById('escanea').innerText = textos[idioma].escanea;
-
-    // Guardar la preferencia del usuario
-    localStorage.setItem('idioma', idioma);
 }
 
-// Detectar el idioma del navegador y aplicarlo al cargar la página
-document.addEventListener("DOMContentLoaded", () => {
-    const idiomaGuardado = localStorage.getItem('idioma') || (navigator.language.startsWith("es") ? "es" : "en");
-    cambiarIdioma(idiomaGuardado);
-});
+// Función para aplicar el idioma seleccionado
+function aplicarIdioma(idioma = null) {
+    const idiomaGuardado = idioma || localStorage.getItem('idioma') || (navigator.language.startsWith("es") ? "es" : "en");
+
+    if (!textos[idiomaGuardado]) return; // Evitar errores si el idioma no existe en JSON
+
+    // Buscar todos los elementos con ID que coincidan con una clave de traducción
+    document.querySelectorAll("[id]").forEach(element => {
+        let key = element.id;
+        if (textos[idiomaGuardado][key]) {
+            if (element.tagName === "A") {
+                element.innerText = textos[idiomaGuardado][key]; // Cambiar texto del enlace
+                if (key === "chainJournal") {
+                    element.href = textos[idiomaGuardado]["chainJournalLink"]; // Cambiar URL del enlace
+                }
+            } else {
+                element.innerHTML = textos[idiomaGuardado][key]; // Cambiar texto normal
+            }
+        }
+    });
+
+    // Guardar la preferencia del usuario
+    localStorage.setItem('idioma', idiomaGuardado);
+}
+
+function cambiarIdioma(nuevoIdioma) {
+    document.documentElement.lang = nuevoIdioma; // Cambia el atributo lang en <html>
+    localStorage.setItem('idioma', nuevoIdioma);
+    aplicarIdioma(nuevoIdioma);
+
+    // Cambiar la meta description para SEO dinámico
+    let metaDescription = document.querySelector("meta[name='description']");
+    if (metaDescription) {
+        metaDescription.setAttribute("content", textos[nuevoIdioma]["descripcion"]);
+    }
+}
+
+
+
+// Cargar traducciones al iniciar la página
+document.addEventListener("DOMContentLoaded", cargarTraducciones);

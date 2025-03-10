@@ -1,118 +1,143 @@
-![Logo](https://cdn.cottle.cloud/GitHub/LittleLink/littlelink.gif)
+# **Palozebra LittleLink**
+Basado en **LittleLink**, esta versión extendida incorpora mejoras clave, como **soporte para múltiples idiomas y un diseño con acordeones**, ideal para mostrar más información de manera organizada.
 
-# LittleLink
-The DIY self-hosted LinkTree alternative. LittleLink has more than 100 branded button styles you can easily use, with more regularly added by our community in this repo and in [LittleLink Extended](https://github.com/sethcottle/littlelink-extended). 
-
----
-### 🆕 LittleLink Button Builder
-Want to make your own buttons for LittleLink but you're not too sure where to start? [Check out our new Button Builder](https://builder.littlelink.io). This new builder lets you preview button styles and with a single click, copy the generated CSS code to put in `css/brands.css`, and copy the generated HTML code to put in `index.html`. This builder also helps automate accessibility features by checking contrast ratios and suggesting strokes when needed, ensuring your custom buttons maintain LittleLink's high standards for visibility in both light and dark themes. Design your buttons visually, preview them live, and get ready to go code. [Live Site](https://builder.littlelink.io) | [GitHub Repo](https://github.com/sethcottle/littlelink-button-builder)
-
----
-### 🌞 Themes and Accessibility
-LittleLink offers `auto`, `light`, and `dark` themes right out of the box. If the default color schemes don't match your preference, you can easily customize them by updating the values in `style.css`. You can set any of the themes right in `index.html`. To enhance visual accessibility in both `light` and `dark` modes, buttons lacking sufficient contrast with the background are outlined with an inverse stroke to ensure visibility. While LittleLink emphasizes accessibility, it's important to acknowledge that not all brands incorporated into LittleLink achieve this standard. Branded buttons that come into LittleLink always retain the original essence of the brand and some branded buttons might fall short of optimal accessibility in terms of contrast.
-
-![Theme](https://cdn.cottle.cloud/GitHub/LittleLink/ThemeSupport.gif)
+## **🆕 Características principales**
+✅ **Acordeones interactivos** para organizar el contenido.  
+✅ **Traducción automática con JSON** sin necesidad de modificar `index.html`.  
+✅ **Detección automática del idioma del navegador** y almacenamiento de la preferencia del usuario.  
+✅ **Carga dinámica de enlaces y textos en múltiples idiomas**.  
 
 ---
-### 🥇 Performance
 
-![Performance](https://cdn.cottle.cloud/GitHub/LittleLink/ranking.gif)
+## **🌍 Configuración de Idiomas y Traducción**
 
-LittleLink epitomizes simplicity and minimalism. When evaluating the [LittleLink sample page](https://littlelink.io/sample/seth) (which mirrors a typical LittleLink setup for an individual) through tools such as [Google PageSpeed Insights](https://pagespeed.web.dev/analysis/https-littlelink-io-sample-seth/17ex80ryq4?form_factor=mobile), showcases LittleLink's excellence with 100/100 in Performance, Accessibility, Best Practices, and SEO. My initial vision for LittleLink was to craft it from the fundamentals. LittleLink leverages it's own vanilla `css` to remove the unnecessary bloat you would get from using a large framework for a page that requires nothing more than simplicity.
+Este proyecto implementa un sistema de **traducción automática** basado en **JSON y JavaScript**, lo que permite cambiar dinámicamente el idioma sin necesidad de modificar `index.html` manualmente.
+
+### **📌 ¿Cómo funciona?**
+
+1. **Los textos de la página están almacenados en `traducciones.json`.**  
+2. **El script `lang.js`** carga dinámicamente las traducciones y cambia el contenido de los elementos en función de su `id`.  
+3. **El idioma se guarda en `localStorage`**, por lo que la página recuerda la preferencia del usuario.  
+4. **Los enlaces de cambio de idioma ejecutan `cambiarIdioma('es')` o `cambiarIdioma('en')`**.  
 
 ---
-### ☁️ Deploy
 
-![Publish](https://cdn.cottle.cloud/GitHub/LittleLink/test/css/deploy.gif)
+### **📂 1️⃣ Estructura de `traducciones.json`**
 
-No need for gulp, npm, or anything else to make LittleLink work—it uses the bare essentials. You can automatically fork and deploy LittleLink with [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), or [Amplify](https://aws.amazon.com/amplify) using the button below. LittleLink is also easy to host through [GitHub Pages](https://pages.github.com/) or on your home lab server, CDN, or other frontend hosting services. To edit, all you need is a little basic HTML knowledge to add a link to the exisiting buttons or you can create your own. See our [adding custom buttons to your own fork wiki](https://github.com/sethcottle/littlelink/wiki/Adding-custom-buttons-to-your-own-fork). It's simple, promise. 🤞
+Este archivo contiene todos los textos de la página en diferentes idiomas:
+
+```json
+{
+    "es": {
+        "descripcion": "Estudio creativo enfocado en branding, diseño digital y producción audiovisual. Explora nuestro trabajo en diseño, web y audio.",
+        "diseno": "🎨 Diseño",
+        "produccion": "🎧 Producción Musical & Distribución",
+        "web": "💻 Desarrollo Web",
+        "marketing": "📧 Marketing Digital",
+        "creatividad": "💡 Creatividad & Conceptos",
+        "contacto": "📞 Contacto",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "guardar": "Guarda mi contacto",
+        "escanea": "Escanea mi contacto:",
+        "chainJournal": "📖 Chain Journal (Amazon)",
+        "chainJournalLink": "https://a.co/d/6GkueOL"
+    },
+    "en": {
+        "descripcion": "Creative studio focused on branding, digital design, and audiovisual production. Explore our work in design, web, and audio.",
+        "diseno": "🎨 Design",
+        "produccion": "🎧 Music Production & Distribution",
+        "web": "💻 Web Development",
+        "marketing": "📧 Digital Marketing",
+        "creatividad": "💡 Creativity & Concepts",
+        "contacto": "📞 Contact",
+        "whatsapp": "WhatsApp",
+        "email": "Email",
+        "guardar": "Save my contact",
+        "escanea": "Scan my contact:",
+        "chainJournal": "📖 Chain Journal (Amazon)",
+        "chainJournalLink": "https://a.co/d/1wwYW1J"
+    }
+}
+```
 
 ---
-##### One-Click Deployments
+
+### **📜 2️⃣ Cómo cambiar de idioma en `index.html`**
+
+Para que los usuarios puedan cambiar el idioma, agrega estos enlaces en tu `index.html`:
+
+```html
+<p class="language-switcher"> 
+    <a href="#" id="lang-es" class="lang-link">Español</a> | 
+    <a href="#" id="lang-en" class="lang-link">English</a>
+</p>
+```
+
+Y en `lang.js`, asegúrate de agregar el `EventListener` para manejar los clics:
+
+```js
+document.addEventListener("DOMContentLoaded", () => {
+    cargarTraducciones();
+
+    // Asegurar que los botones de cambio de idioma funcionen
+    document.getElementById("lang-es").addEventListener("click", function(event) {
+        event.preventDefault();
+        cambiarIdioma("es");
+    });
+
+    document.getElementById("lang-en").addEventListener("click", function(event) {
+        event.preventDefault();
+        cambiarIdioma("en");
+    });
+});
+```
+
+---
+
+### **📦 3️⃣ ¿Cómo agregar más textos o idiomas?**
+
+1. **En `traducciones.json`**, agrega la nueva clave en todos los idiomas:
+
+```json
+"nuevoTexto": "Este es un nuevo texto en español"
+```
+
+```json
+"nuevoTexto": "This is a new text in English"
+```
+
+2. **En `index.html`**, simplemente usa la `id` correspondiente:
+
+```html
+<p id="nuevoTexto">Este es un nuevo texto en español</p>
+```
+
+**¡Listo!** Se traducirá automáticamente.
+
+---
+
+## **📁 Estructura del Código**
+Este proyecto mantiene una estructura simple basada en `LittleLink`, con los siguientes archivos clave:
+
+📌 **`index.html`** → Contiene la estructura principal con los `id` para la traducción.  
+📌 **`traducciones.json`** → Guarda los textos en diferentes idiomas.  
+📌 **`lang.js`** → Gestiona el cambio de idioma y aplica las traducciones.  
+📌 **`accordion.js`** → Maneja los acordeones para mostrar y ocultar contenido.  
+📌 **`style.css`** → Define los estilos y animaciones.  
+
+---
+
+## **🔗 Deploy**
+Puedes desplegar esta versión fácilmente en **Vercel, Netlify o GitHub Pages** como cualquier otra instancia de LittleLink.
 
 [![Deploy to Vercel](https://cdn.cottle.cloud/littlelink/button-deploy-vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsethcottle%2Flittlelink&project-name=littlelink&repository-name=littlelink)
 
-[![Deploy to Netlify](https://cdn.cottle.cloud/littlelink/button-deploy-netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sethcottle/littlelink)
+---
 
-[![Deploy to Amplify](https://cdn.cottle.cloud/littlelink/button-deploy-amplify.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/sethcottle/littlelink)
+### **📊 Performance**
+🚀 **Optimizado para velocidad y accesibilidad**, esta versión mantiene la ligereza de LittleLink, pero con más funcionalidades para quienes necesitan una página de enlaces más dinámica.
 
 ---
 
-### 🤝 Contributions
-Please reference the [submitting a new brand to LittleLink wiki](https://github.com/sethcottle/littlelink/wiki/Submitting-a-new-brand-to-LittleLink) before opening a PR.
-
----
-### 📦 Community Extras
-
-#### 🛸 LittleLink Extended
-Looking for more niche services to add to your copy of LittleLink? Check out [LittleLink Extended](https://github.com/sethcottle/littlelink-extended). Users can add more niche services to this repository to help keep the core LittleLink repository less cluttered and more focused on delivering branded experiences for the majority of users.
-
-#### 🎨 Figma
-Duplicate the [LittleLink Template on Figma Community](https://www.figma.com/community/file/846568099968305613) to help plan out and design your LittleLink page.
-
-[![Figma Community](https://cdn.cottle.cloud/littlelink/button-figma-community.svg)](https://www.figma.com/community/file/846568099968305613)
-
-#### 🐋 Docker
-• [Techno Tim](https://github.com/timothystewart6) is building [LittleLink-Server](https://github.com/techno-tim/littlelink-server). Check out [his video](https://youtu.be/42SqfI_AjXU)!
-
-• [Drew](https://github.com/davisdre) is building a [super simple Docker implementation of LittleLink](https://github.com/davisdre/littlelink).
-
-#### 🗃️ Misc
-• [Julian](https://github.com/JulianPrieber) is building [LinkStack](https://github.com/LinkStackOrg/LinkStack), which is a fork of [Khashayar](https://github.com/khashayarzavosh)'s [LittleLink Admin](https://github.com/khashayarzavosh/admin-littlelink).
-
----
-
-### 💖 Supporters
-You can support LittleLink by [buying me a coffee](https://www.buymeacoffee.com/seth). You can also have your name or your company added to this section and the supporters page of the [LittleLink.io](https://littlelink.io) website.
-
-#### 🏢 Business Supporters ($75 tier)
-• **[links.dev](https://github.com/fatih-yavuz/links.dev)**
-
-[![Add Your Company Name](https://cdn.cottle.cloud/littlelink/button-buy-me-a-coffee-company.svg)](https://www.buymeacoffee.com/seth/e/50574)
-
-#### ✨ Individual Supporters ($25 tier)
-• **[Drew Davis](https://connect.davisdre.me)**
-
-• **[Robotter112](https://robotter112.de/)**
-
-[![Buy Me A Coffee](https://cdn.cottle.cloud/littlelink/button-buy-me-a-coffee-individual.svg)](https://www.buymeacoffee.com/seth/e/50573)
-
-#### 🐙 Active GitHub Sponsors
-• **[@nghialele](https://github.com/nghialele)**
-
-• **[Your Name Here](https://github.com/sponsors/sethcottle)**
-
-[![GitHub Sponsors](https://cdn.cottle.cloud/littlelink/button-github-sponsors.svg)](https://github.com/sponsors/sethcottle)
-
-#### ❤️ Patreon Members
-• **[Your Name Here](https://www.patreon.com/sethcottle)**
-
-[![Patreon](https://cdn.cottle.cloud/littlelink/button-patreon.svg)](https://www.patreon.com/sethcottle)
-
-
-#### 🥰 More Ways to Support LittleLink
-[![Buy Me A Coffee](https://cdn.cottle.cloud/littlelink/button-buy-me-a-coffee.svg)](https://www.buymeacoffee.com/seth/)
-
-[![Ko-Fi](https://cdn.cottle.cloud/littlelink/button-ko-fi.svg)](https://ko-fi.com/sethcottle)
-
-[![PayPal](https://cdn.cottle.cloud/littlelink/button-paypal.svg)](https://paypal.me/sethcottle/)
-
----
-
-### 🆕 Stay Connected
-
-Join the [Seth's Nook Discord](https://discord.gg/PrAEQFF2fK) server to get updates on LittleLink and more. Use the invite code `PrAEQFF2fK` or click the button below.
-
-[![Discord](https://cdn.cottle.cloud/littlelink/button-discord.svg)](https://discord.gg/PrAEQFF2fK)
-
----
-
-### 📊 Analytics
-
-To help build a more privacy focused product, we recommend using [Fathom Analytics](https://usefathom.com/ref/EQVZMV)*. [View our Fathom analytics dashboard](https://app.usefathom.com/share/xbmnwxxl/littlelink.io#/?filters=%5B%5D&range=last_7_days&site=2251799827005303)**.
-
-###### * This is a referral link. Using this link to sign up for Fathom is an easy way to help support LittleLink!
-
-###### ** Analytics in this dashboard start May 03, 2022. View this [Google Sheets file](https://docs.google.com/spreadsheets/d/1GL4SroAdH-OZphBVR5z-BoSukHIEVJfao25q_e9-Ii8/edit?usp=sharing) with the generic unique pageview data from Google Analytics.
-
-[![Fathom](https://cdn.cottle.cloud/littlelink/button-fathom-analytics.svg)](https://usefathom.com/ref/EQVZMV)
+✅ **Esta versión de LittleLink es ideal para quienes quieren una página más dinámica, con múltiples idiomas y una mejor organización del contenido.** 🚀🔥
