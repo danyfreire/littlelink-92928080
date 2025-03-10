@@ -395,7 +395,7 @@ ul li {
 	font-style:normal;
 	font-weight:400;
 	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot');
-	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
+	src:url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_cyrillic-ext_cyrillic-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_cyrillic-ext_cyrillic-regular.woff2') format('woff2'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff') format('woff'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.ttf') format('truetype'),url('../fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.svg#OpenSans') format('svg');
 }
 @font-face {
 	font-display:swap;
@@ -520,21 +520,33 @@ ul li {
     text-align: left; /* Centrar el texto dentro */
 }
 
-.showcase-container {
-    width: 100%;
-    max-width: 600px; /* Ajusta el ancho del carrusel */
-    margin: 20px auto; /* Asegura margen superior e inferior */
-    padding: 15px;
-    background: #ffffff; /* Fondo claro */
-    border-radius: 10px;
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */ /* Sombra sutil */
+/* .showcase-container { */
+    /* width: 100%; */
+    /* max-width: 600px; *//*Ajusta el ancho del carrusel */
+    /* margin: 20px auto; Asegura margen superior e inferior */
+    /* padding: 15px; */
+    /* background: #ffffff; Fondo claro */
+    /* border-radius: 10px; */
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */ 
+/* } */
+
+
+ .showcase-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Cuando el contenedor tenga la clase "open", le damos una altura grande para que se muestre el contenido */
+.showcase-container.open {
+    max-height: 1000px;  /* Ajusta este valor si es necesario */
 }
 
 
 
 .swiper {
     width: 100%;
-    height: 300px; /* Ajusta la altura de las tarjetas */
+    height: 320px; /* Ajusta la altura de las tarjetas */
 }
 
 .logo-card {
@@ -586,3 +598,89 @@ ul li {
     font-size: 14px;
     text-align: center;
 }
+
+/* Estilo para los paneles del acordeón */
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* Estilo para los paneles activos */
+.panel.active {
+    max-height: 1000px; /* Ajusta este valor según sea necesario */
+}
+
+/* Estilo para los contenedores de showcase */
+.showcase-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* Cuando el contenedor tenga la clase "open", le damos una altura grande para que se muestre el contenido */
+.showcase-container.open {
+    max-height: 1000px; /* Ajusta este valor según sea necesario */
+}
+
+/* Estilo para los paneles del acordeón */
+.panel {
+    display: none; /* Oculto por defecto */
+    overflow: hidden; /* Ocultar contenido que se desborda */
+    transition: max-height 0.2s ease-out; /* Transición suave */
+    max-height: 0; /* Altura máxima inicial */
+}
+
+/* Estilo para los paneles activos */
+.panel.active {
+    display: block; /* Mostrar el panel */
+    max-height: 1000px; /* Ajusta este valor según sea necesario */
+}
+
+/* Panel principal */
+.panel {
+    background-color: #fff;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-bottom: 10px;
+}
+
+.panel.active {
+    max-height: 2000px; /* Valor más alto para contenido más largo */
+    padding: 10px;
+}
+
+/* Contenedor de showcase */
+.showcase-container {
+    background-color: #fff;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    width: 100%;
+}
+
+.showcase-container.active {
+    max-height: 2200px;
+    padding: 10px 10px 10px 20px;
+}
+
+/* Ajuste del botón acordeón */
+.accordion {
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.accordion:after {
+    content: '\25BC';
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion.active:after {
+    transform: rotate(180deg);
+}
+

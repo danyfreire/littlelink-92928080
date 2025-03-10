@@ -14,7 +14,13 @@
         "chainJournal": "📖 Chain Journal (Amazon)",
         "chainJournalLink": "https://a.co/d/6GkueOL",
         "identidadVisual": "🎨 Identidad Visual (Logos)",
-        "ropa": "👕 Ropa y Accesorios"
+        "ropa": "👕 Ropa y Accesorios",
+        "libros": "📚 Libros",
+        "tiendaAmazon": "🛒 Tienda Amazon",
+        "catalogo_heartdesigns": "📖 Catálogo Heart Designs",
+        "descripcionDiseno": "Servicios de diseño gráfico e identidad visual",
+        "descripcion-logo-heartdesigns": "Logo inspirado en la mascota del dueño para marca de camisetas"
+        
     },
     "en": {
         "descripcion": "Creative studio focused on branding, digital design, and audiovisual production. Explore our work in design, web, and audio.",
@@ -31,6 +37,13 @@
         "chainJournal": "📖 Chain Journal (Amazon)",
         "chainJournalLink": "https://a.co/d/1wwYW1J",
         "identidadVisual": "🎨 Visual Identity (Logos)",
-        "ropa": "👕 Clothing and Accessories"
+        "ropa": "👕 Clothing and Accessories",
+        "libros": "📚 Books",
+        "tiendaAmazon": "🛒 Amazon Store",
+        "catalogo_heartdesigns": "📖 Heart Designs Catalog",
+        "descripcionDiseno": "Graphic design and visual identity services",
+        "descripcion-logo-heartdesigns": "Logo inspired by the owner's pet for a T-shirt brand"
+
+
     }
 }

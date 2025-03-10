@@ -43,24 +43,29 @@
             
             <!-- Botones principales -->
             <div class="button-stack" role="navigation">
+                <!-- Diseño -->
                 <button class="button button-default accordion" id="diseno">🎨 Diseño</button>
                 <div class="panel">
-                    <p>Servicios de diseño gráfico e identidad visual</p>
+                    <p id="descripcionDiseno">Servicios de diseño gráfico e identidad visual</p>
                     <ul>
                         <li>
-                            <a id="chainJournal" href="https://a.co/d/6GkueOL" target="_blank">📖 Chain Journal (Amazon)</a>
+                            <a id="libros" href="#" class="toggle-content">📖 Libros</a>
+                            <div class="showcase-container">
+                                <ul>
+                                    <li>
+                                        <a id="chainJournal" href="https://a.co/d/6GkueOL" target="_blank">Chain Journal (Amazon)</a>
+                                    </li>                             
+                                </ul>
+                            </div>
                         </li>
                         <li>
-                            <a id="identidadVisual" href="#">🎨 Identidad Visual</a>
-                        
-                        
-                            <!-- Contenedor del carrusel (siempre visible) -->
+                            <a id="identidadVisual" href="#" class="toggle-content">🎨 Identidad Visual</a>
                             <div class="showcase-container">
                                 <div class="swiper mySwiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                            <img src="https://placehold.co/300x300" alt="Logo 1">
-                                            <p>Descripción del Logo 1</p>
+                                            <img src="images/logos/logo-heartdesigns.png" alt="Logo HeartDesigns">
+                                            <p id="descripcion-logo-heartdesigns">Logo para la empresa de modas HeartDesigns de Guayaquil, Ecuador basado en la mascota del dueño</p>
                                         </div>
                                         <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
                                             <img src="https://placehold.co/300x300" alt="Logo 2">
@@ -75,13 +80,22 @@
                                 </div>
                             </div>
                         </li>
-                        
                         <li>
-                            <a id="ropa" href="https://www.amazon.com/stores/page/5D0B9854-CE0E-4990-84F8-37FB9ED5E659" target="_blank">👕 Ropa</a>
+                            <a id="ropa" href="#" class="toggle-content">👕 Ropa</a>
+                            <div class="showcase-container">
+                                <ul>
+                                    <li>
+                                        <a id="tiendaAmazon" href="https://www.amazon.com/stores/page/5D0B9854-CE0E-4990-84F8-37FB9ED5E659" target="_blank">Tienda Amazon</a>
+                                    </li>     
+                                    <li>
+                                        <a id="catalogo_heartdesigns" href="#" target="_blank">Catálogo: HeartDesigns</a>
+                                    </li>                         
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                
+
                 <button class="button button-default accordion" id="produccion">🎧 Producción Musical & Distribución</button>
                 <div class="panel">
                     <p>Producción musical, mezcla, distribución y marketing para artistas.</p>

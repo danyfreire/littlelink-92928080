@@ -1,16 +1,40 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let acc = document.getElementsByClassName("accordion");
+document.addEventListener('DOMContentLoaded', function() {
+    // Manejo de acordeones principales
+    document.querySelectorAll('.accordion').forEach(button => {
+        button.addEventListener('click', function() {
+            // Cerrar todos los otros paneles principales
+            document.querySelectorAll('.accordion').forEach(otherButton => {
+                if (otherButton !== this) {
+                    otherButton.classList.remove('active');
+                    otherButton.nextElementSibling.classList.remove('active');
+                }
+            });
 
-    for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-
+            // Alternar el panel actual
+            this.classList.toggle('active');
             let panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null; // Cierra la sección
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px"; // Abre la sección con altura dinámica
-            }
+            panel.classList.toggle('active');
         });
-    }
+    });
+
+    // Manejo de contenido desplegable interno
+    document.querySelectorAll('.toggle-content').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Cerrar todos los otros contenedores showcase del mismo nivel
+            let parentLi = this.closest('li');
+            parentLi.parentElement.querySelectorAll('.toggle-content').forEach(otherLink => {
+                if (otherLink !== this) {
+                    otherLink.classList.remove('active');
+                    otherLink.nextElementSibling.classList.remove('active');
+                }
+            });
+
+            // Alternar el contenedor actual
+            this.classList.toggle('active');
+            let container = this.nextElementSibling;
+            container.classList.toggle('active');
+        });
+    });
 });
