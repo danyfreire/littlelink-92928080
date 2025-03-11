@@ -66,6 +66,14 @@
                                             <img src="images/logos/logo-daletouch.png" alt="Logo DaleTouch">
                                             <p id="descripcion-logo-daletouch">Logo para empresa de Consultoría de Transformación Digital</p>
                                         </div>
+                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
+                                            <img src="images/portadas/portadapursoanimales.png" alt="Book Cover">
+                                            <p id="descripcion-portada-libro">Portada del libro Puros Animales</p>
+                                        </div>
+                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
+                                            <img src="images/portadas/Portada - Chao - Dany Freire.png" alt="Album Cover">
+                                            <p id="descripcion-portada-album">Portada del Album Chao</p>
+                                        </div>
                                     </div>
                                     <div class="swiper-pagination"></div>
                                 </div>
@@ -99,10 +107,65 @@
                     </ul>
                 </div>
 
-                <button class="button button-default accordion" id="produccion">🎧 Producción Musical & Distribución</button>
+                <button class="button button-default accordion" id="produccion-musical">🎧 Producción Musical & Distribución</button>
                 <div class="panel">
-                    <p>Producción musical, mezcla, distribución y marketing para artistas.</p>
-                    <p>Proyectos activos: Luciérnaga, Los Smokings, Rodney Durán, Dany Freire.</p>
+                    <p id="descripcion-produccion-musical">Producción musical, mezcla, distribución y marketing para artistas.</p>
+                    <!-- Este es el carrousel de artistas -->
+                    <ul>
+                        <li>
+                            <a id="artistas" href="#" class="toggle-content">🎸 Artistas</a>
+                            <div class="showcase-container">
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
+                                            <a href="https://open.spotify.com/artist/6xSbwTDdHOAWQVfScq2Jpd?si=asiWLXXuQSa4egE-8LVhKg" target="_blank"><img src="images/artistas/artista-luciernaga.png" alt="Luciérnaga"></a>
+                                            <p id="artist1">Luciérnaga</br> Producción, Distribución, Marketing</p>
+                                        </div>
+                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
+                                            <img src="images/artistas/artista-lossmokings.png" alt="Los Smokings">
+                                            <p id="artist2">Los Smokings</br> Distribución, Marketing</p>
+                                        </div>
+                                        <div class="swiper-slide" style="background-color: rgb(173, 186, 241);">
+                                            <img src="images/artistas/artista-rodneyduran.png" alt="Rodney Durán">
+                                            <p id="artist3">Rodney Durán</br> Producción, Distribución, Marketing</p>
+                                        </div>
+                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
+                                            <img src="images/artistas/artista-danyfreire.png" alt="Dany Freire">
+                                            <p id="artist4">Dany Freire</br> Producción, Distribución, Marketing</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </li>
+
+                       <!--  <li>
+                            <a id="libros" href="#" class="toggle-content">📖 Libros</a>
+                            <div class="showcase-container">
+                                <ul>
+                                    <li>
+                                        <a id="chainJournal" href="https://a.co/d/6GkueOL" target="_blank">Chain Journal (Amazon)</a>
+                                    </li>                             
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <a id="ropa" href="#" class="toggle-content">👕 Ropa</a>
+                            <div class="showcase-container">
+                                <ul>
+                                    <li>
+                                        <a id="tiendaAmazon" href="https://www.amazon.com/stores/page/5D0B9854-CE0E-4990-84F8-37FB9ED5E659" target="_blank">Tienda Amazon</a>
+                                    </li>     
+                                    <li>
+                                        <a id="catalogo_heartdesigns" href="#" target="_blank">Catálogo: HeartDesigns</a>
+                                    </li>                         
+                                </ul>
+                            </div>
+                        </li> -->
+                    </ul>
+
                 </div>
                 
                 <button class="button button-default accordion" id="web">💻 Desarrollo Web</button>
@@ -154,6 +217,10 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
     var swiper = new Swiper(".mySwiper", {
+        effect: "cards",
+        grabCursor: true,
+    });
+    var swiper = new Swiper(".mySwiper2", {
         effect: "cards",
         grabCursor: true,
     });
