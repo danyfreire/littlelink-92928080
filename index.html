@@ -171,6 +171,38 @@
                 <button class="button button-default accordion" id="web">💻 Desarrollo Web</button>
                 <div class="panel">
                     <p>Desarrollo de sitios web personalizados con Joomla, HTML y CSS.</p>
+                
+                                    <!-- Este es el carrousel de websites -->
+                                    <ul>
+                                        <li>
+                                            <a id="websites" href="#" class="toggle-content">💻🖥️📱 Websites y proyectos</a>
+                                            <div class="showcase-container">
+                                                <div class="swiper mySwiper3">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
+                                                            <img src="images/websites/webmockup1.png" alt="Website Mockup">
+                                                            <p id="website1">Sitio web tipo tarjeta de presentación</p>
+                                                        </div>
+                                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
+                                                            <img src="images/artistas/artista-lossmokings.png" alt="Los Smokings">
+                                                            <p id="artist2">Los Smokings</br> Distribución, Marketing</p>
+                                                        </div>
+                                                        <div class="swiper-slide" style="background-color: rgb(173, 186, 241);">
+                                                            <img src="images/artistas/artista-rodneyduran.png" alt="Rodney Durán">
+                                                            <p id="artist3">Rodney Durán</br> Producción, Distribución, Marketing</p>
+                                                        </div>
+                                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
+                                                            <img src="images/artistas/artista-danyfreire.png" alt="Dany Freire">
+                                                            <p id="artist4">Dany Freire</br> Producción, Distribución, Marketing</p>
+                                                        </div>
+                
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                
                 </div>
                 
                 <button class="button button-default accordion" id="marketing">📧 Marketing Digital</button>
@@ -224,6 +256,11 @@
         effect: "cards",
         grabCursor: true,
     });
+    var swiper = new Swiper(".mySwiper3", {
+        effect: "cards",
+        grabCursor: true,
+    });
+    
     </script>
 
 </body>
