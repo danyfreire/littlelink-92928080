@@ -99,7 +99,7 @@
                                         <a id="tiendaAmazon" href="https://www.amazon.com/stores/page/5D0B9854-CE0E-4990-84F8-37FB9ED5E659" target="_blank">Tienda Amazon</a>
                                     </li>     
                                     <li>
-                                        <a id="catalogo_heartdesigns" href="#" target="_blank">Catálogo: HeartDesigns</a>
+                                        <a id="catalogo_heartdesigns" href="#" onclick="event.preventDefault();" target="_blank">Catálogo: HeartDesigns</a>
                                     </li>                         
                                 </ul>
                             </div>
@@ -122,7 +122,7 @@
                                             <p id="artist1">Luciérnaga</br> Producción, Distribución, Marketing</p>
                                         </div>
                                         <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
-                                            <img src="images/artistas/artista-lossmokings.png" alt="Los Smokings">
+                                            <a href="https://open.spotify.com/artist/1RPm3ux3cK8oTcCyII8HXR?si=h0mkOWdLQO6lzPEbdqh8QQ" target="_blank"><img src="images/artistas/artista-lossmokings.png" alt="Los Smokings"></a>
                                             <p id="artist2">Los Smokings</br> Distribución, Marketing</p>
                                         </div>
                                         <div class="swiper-slide" style="background-color: rgb(173, 186, 241);">
@@ -130,7 +130,7 @@
                                             <p id="artist3">Rodney Durán</br> Producción, Distribución, Marketing</p>
                                         </div>
                                         <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                            <img src="images/artistas/artista-danyfreire.png" alt="Dany Freire">
+                                            <a href="https://open.spotify.com/artist/4LtR6Bnzu2oWh0wU0ZWbon" target="_blank"><img src="images/artistas/artista-danyfreire.png" alt="Dany Freire"></a>
                                             <p id="artist4">Dany Freire</br> Producción, Distribución, Marketing</p>
                                         </div>
 
@@ -170,18 +170,76 @@
                 
                 <button class="button button-default accordion" id="web">💻 Desarrollo Web</button>
                 <div class="panel">
-                    <p>Desarrollo de sitios web personalizados con Joomla, HTML y CSS.</p>
+                    <p id="descripcionWeb">
+                        Diseño y desarrollo de sitios web personalizados, optimizados para SEO y velocidad.
+                    </p>
+                    <ul>
+                        <li id="especialidadWeb">🎯 Especializado en landing pages, tarjetas de presentación digital y blogs.</li>
+                        <li id="experienciaWeb">⚡ Experiencia en HTML, CSS, Joomla y herramientas de automatización.</li>
+                        <li id="contactoWeb">📌 Si necesitas una web para tu negocio o proyecto, contáctame.</li>
+                    </ul>
+                
+                                    <!-- Este es el carrousel de websites -->
+                                    <ul>
+                                        <li>
+                                            <a id="websites-proyectos" href="#" class="toggle-content">💻🖥️📱 Websites y proyectos</a>
+                                            <div class="showcase-container">
+                                                <div class="swiper mySwiper3">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
+                                                            <img src="images/websites/webmockup1.png" alt="Website Tarjeta de Presentación">
+                                                            <p id="website1">Sitio web tipo tarjeta de presentación</p>
+                                                        </div>
+                                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
+                                                            <img src="images/websites/webmockup2.png" alt="Landing Page">
+                                                            <p id="website2">Landing page para captar clientes</p>
+                                                        </div>
+                                                        <div class="swiper-slide" style="background-color: rgb(173, 186, 241);">
+                                                            <img src="images/websites/webmockup3.png" alt="Portfolio">
+                                                            <p id="website3">Blog o portafolio personal</p>
+                                                        </div>
+                                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
+                                                            <img src="images/websites/webmockup4.png" alt="Catálogo de Productos">
+                                                            <p id="website4">Catálogo digital para productos o servicios</p>
+                                                        </div>
+                                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
+                                                            <img src="images/websites/webmockup5.png" alt="Página de Eventos">
+                                                            <p id="website5">Sitio web para eventos y promociones</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                
                 </div>
                 
                 <button class="button button-default accordion" id="marketing">📧 Marketing Digital</button>
-                <div class="panel">
-                    <p>Estrategia y campañas de email marketing.</p>
-                </div>
+<div class="panel">
+    <p id="descripcionMarketing">Convierte tu audiencia en clientes a través de estrategias digitales efectivas</p>
+    <ul>
+        <li id="servicioEmail">📩 <strong>Email Marketing:</strong> Creación y automatización de correos personalizados para mejorar la conversión.</li>
+        <li id="servicioPublicidad">🎯 <strong>Publicidad en Redes Sociales:</strong> Anuncios en Facebook, Instagram y Google Ads segmentados para mayor impacto.</li>
+        <li id="servicioSEO">📊 <strong>SEO y Posicionamiento Web:</strong> Optimización de contenido y estrategias para mejorar la visibilidad en Google.</li>
+        <li id="servicioConversion">🛍️ <strong>Estrategias de Conversión:</strong> Creación de embudos de ventas y optimización de experiencia de usuario.</li>
+    </ul>
+    <p id="ctaMarketing">📌 <strong>¿Listo para mejorar tu presencia digital?</strong> Contáctanos y te ayudamos a crecer con estrategias efectivas.</p>
+</div>
+
                 
-                <button class="button button-default accordion" id="creatividad">💡 Creatividad & Conceptos</button>
-                <div class="panel">
-                    <p>Storytelling, naming y consultoría en creatividad aplicada.</p>
-                </div>
+<button class="button button-default accordion" id="creatividad">💡 Creatividad Aplicada</button>
+<div class="panel">
+    <p id="descripcionCreatividad">Estrategias creativas para potenciar marcas y proyectos.</p>
+    <ul>
+        <li id="servicioStorytelling">✍️ <strong>Storytelling:</strong> Creación de narrativas atractivas para marcas y productos.</li>
+        <li id="servicioNaming">🏷️ <strong>Naming:</strong> Desarrollo de nombres originales y memorables para empresas y proyectos.</li>
+        <li id="servicioConsultoria">🎨 <strong>Consultoría Creativa:</strong> Ideas innovadoras para branding, contenido y estrategias de comunicación.</li>
+    </ul>
+    <p id="ctaCreatividad">📌 <strong>¿Necesitas una idea fresca para tu proyecto?</strong> Contáctanos y transformemos juntos tu concepto en algo único.</p>
+</div>
+
             </div>
             
             <!-- Contacto -->
@@ -224,6 +282,11 @@
         effect: "cards",
         grabCursor: true,
     });
+    var swiper = new Swiper(".mySwiper3", {
+        effect: "cards",
+        grabCursor: true,
+    });
+    
     </script>
 
 </body>
