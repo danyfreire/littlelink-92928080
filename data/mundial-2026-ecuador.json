@@ -1,0 +1,57 @@
+{
+  "last_updated": "2026-06-18",
+  "country": "Ecuador",
+  "timezone": "America/Guayaquil",
+  "canonical_page": "https://92928080.xyz/mundial-2026-ecuador/",
+  "broadcasters": [
+    {
+      "name": "Teleamazonas",
+      "type": "señal abierta y plataforma digital",
+      "coverage_note": "Teleamazonas informó cobertura de partidos seleccionados del Mundial 2026, incluidos todos los partidos de La Tri.",
+      "source_url": "https://www.teleamazonas.com/mundial/ver-mundial-2026-ecuador-partidos-tri-teleamazonas-senal-abierta-119367/"
+    },
+    {
+      "name": "DSports / DGO / DAZN",
+      "type": "TV pagada y streaming oficial",
+      "coverage_note": "DAZN anunció disponibilidad de canales DSports para suscriptores en Ecuador, Chile, Colombia, Perú y Uruguay, con acceso a los 104 partidos del Mundial según el acuerdo informado.",
+      "source_url": "https://www.reuters.com/sports/soccer/dazn-directv-latin-america-strike-sports-channel-deal-ahead-world-cup-2026-06-11/"
+    }
+  ],
+  "ecuador_group_matches": [
+    {
+      "date": "2026-06-14",
+      "match": "Costa de Marfil vs Ecuador",
+      "stage": "Grupo E",
+      "venue": "Philadelphia Stadium",
+      "where_to_watch_ecuador": "Teleamazonas para La Tri; confirmar programación de DSports/DGO/DAZN."
+    },
+    {
+      "date": "2026-06-20",
+      "match": "Ecuador vs Curazao",
+      "stage": "Grupo E",
+      "venue": "Kansas City Stadium",
+      "where_to_watch_ecuador": "Teleamazonas para La Tri; confirmar programación de DSports/DGO/DAZN."
+    },
+    {
+      "date": "2026-06-25",
+      "match": "Ecuador vs Alemania",
+      "stage": "Grupo E",
+      "venue": "New York New Jersey Stadium",
+      "where_to_watch_ecuador": "Teleamazonas para La Tri; confirmar programación de DSports/DGO/DAZN."
+    }
+  ],
+  "content_policy": {
+    "allowed": [
+      "Canales oficiales",
+      "Horarios en Ecuador",
+      "Programación de TV y streaming oficial",
+      "Páginas informativas por partido"
+    ],
+    "avoid": [
+      "Links a streams no autorizados",
+      "Nombres de sitios piratas",
+      "Instrucciones para evadir bloqueos geográficos",
+      "Promesas de transmisión no confirmada"
+    ]
+  }
+}
