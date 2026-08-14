@@ -48,7 +48,33 @@ function cambiarIdioma(nuevoIdioma) {
     }
 }
 
+// Enlace secundario al laboratorio experimental.
+// Se inserta antes del footer para mantenerlo visible sin competir con los CTA comerciales.
+function insertarCreativeLabLink() {
+    if (document.getElementById('creative-lab-link')) return;
 
+    const footer = document.querySelector('footer');
+    if (!footer || !footer.parentNode) return;
 
-// Cargar traducciones al iniciar la página
-document.addEventListener("DOMContentLoaded", cargarTraducciones);
+    const wrapper = document.createElement('p');
+    wrapper.className = 'language-switcher';
+    wrapper.style.marginTop = '1.5rem';
+    wrapper.style.marginBottom = '0';
+
+    const link = document.createElement('a');
+    link.id = 'creative-lab-link';
+    link.href = 'https://92928080.xyz';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'CREATIVE LAB ↗';
+    link.setAttribute('aria-label', 'Palozebra Creative Lab');
+
+    wrapper.appendChild(link);
+    footer.parentNode.insertBefore(wrapper, footer);
+}
+
+// Cargar traducciones e insertar accesos secundarios al iniciar la página
+document.addEventListener("DOMContentLoaded", () => {
+    cargarTraducciones();
+    insertarCreativeLabLink();
+});
