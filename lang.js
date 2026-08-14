@@ -73,8 +73,18 @@ function insertarCreativeLabLink() {
     footer.parentNode.insertBefore(wrapper, footer);
 }
 
+// El nombre del autor en el footer lleva al sitio personal de Dany.
+function configurarEnlacePersonal() {
+    const authorLink = document.querySelector('footer a');
+    if (!authorLink) return;
+
+    authorLink.href = 'https://23788080.xyz';
+    authorLink.setAttribute('aria-label', 'Dany Freire');
+}
+
 // Cargar traducciones e insertar accesos secundarios al iniciar la página
 document.addEventListener("DOMContentLoaded", () => {
     cargarTraducciones();
     insertarCreativeLabLink();
+    configurarEnlacePersonal();
 });
