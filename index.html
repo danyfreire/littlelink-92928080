@@ -1,300 +1,129 @@
-<!DOCTYPE html>
-<html class="theme-light" lang="es"> <!-- Español como idioma principal -->
-
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Palozebra | Diseño, Web & Audio</title>
-    <link rel="icon" type="image/x-icon" href="/images/avatar.png">
-
-    <meta name="description" content="Palozebra es un estudio creativo especializado en diseño, branding, desarrollo web y producción audiovisual. Descubre nuestro trabajo.">
-    
-    <meta property="og:locale" content="es_ES" />
-    
-    <meta property="og:locale:alternate" content="en_US" />
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Palozebra | Diseño, Web & Audio" />
-    <meta property="og:description" content="Palozebra es un estudio creativo en Guayaquil, Ecuador, enfocado en diseño, música, web y marketing digital." />
-    <meta property="og:url" content="https://palozebra.com/" />
-    <meta property="og:image" content="https://palozebra.com/images/avatar@2x.png" />
-
-    <meta name="keywords" content="Palozebra, diseño gráfico, branding, desarrollo web, producción audiovisual, estudio creativo, Guayaquil">
-    
-    <link rel="canonical" href="https://palozebra.com">
-    <meta name="author" content="Palozebra Creative">
-    
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/brands.css">
-
-    <!-- SwiperJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palozebra | Ideas + tecnología</title>
+  <meta name="description" content="Palozebra es un estudio creativo en Guayaquil que ayuda a empresas a trabajar, vender y crear mejor con diseño, web, automatización e inteligencia artificial.">
+  <link rel="canonical" href="https://palozebra.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Palozebra | Ideas + tecnología">
+  <meta property="og:description" content="Ideas + tecnología para hacer mejor las cosas.">
+  <meta property="og:url" content="https://palozebra.com/">
+  <meta property="og:image" content="https://palozebra.com/images/avatar@2x.png">
+  <link rel="icon" href="images/avatar.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/palozebra-home.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="column">
-            <img class="logo" src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="Palozebra">
-            
-            <p class="language-switcher"> 
-                <a href="#" onclick="cambiarIdioma('es'); return false;" class="lang-link">Español</a> | 
-                <a href="#" onclick="cambiarIdioma('en'); return false;" class="lang-link">English</a>
-            </p>
-            
-            <!-- Descripción -->
-            <p id="descripcion">Palozebra es un estudio creativo en Guayaquil, Ecuador, que trabaja con clientes locales e internacionales en diseño, música, web y marketing digital.</p>
-            
-            <!-- Botones principales -->
-            <div class="button-stack" role="navigation">
-                <!-- Diseño -->
-                <button class="button button-default accordion" id="diseno">🎨 Diseño</button>
-                <div class="panel">
-                    <p id="descripcionDiseno">Servicios de diseño gráfico e identidad visual</p>
-                    <ul>
-
-                        <li>
-                            <a id="diseno-grafico" href="#" class="toggle-content">🎨 Identidad Visual y diseño gráfico</a>
-                            <div class="showcase-container">
-                                <div class="swiper mySwiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                            <img src="images/logos/logo-heartdesigns.png" alt="Logo HeartDesigns">
-                                            <p id="descripcion-logo-heartdesigns">Logo para la empresa de modas HeartDesigns de Guayaquil, Ecuador basado en la mascota del dueño</p>
-                                        </div>
-                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
-                                            <img src="images/logos/LOGO2018MUJERBONITA.png" alt="Logo MujerBonita">
-                                            <p id="descripcion-logo-mujerbonita">Logo para empresa de alquiler de vestidos</p>
-                                        </div>
-                                        <div class="swiper-slide" style="background-color: rgb(173, 186, 241);">
-                                            <img src="images/logos/logo-daletouch.png" alt="Logo DaleTouch">
-                                            <p id="descripcion-logo-daletouch">Logo para empresa de Consultoría de Transformación Digital</p>
-                                        </div>
-                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                            <img src="images/portadas/portadapursoanimales.png" alt="Book Cover">
-                                            <p id="descripcion-portada-libro">Portada del libro Puros Animales</p>
-                                        </div>
-                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
-                                            <img src="images/portadas/Portada - Chao - Dany Freire.png" alt="Album Cover">
-                                            <p id="descripcion-portada-album">Portada del Album Chao</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a id="libros" href="#" class="toggle-content">📖 Libros</a>
-                            <div class="showcase-container">
-                                <ul>
-                                    <li>
-                                        <a id="chainJournal" href="https://a.co/d/6GkueOL" target="_blank">Chain Journal (Amazon)</a>
-                                    </li>                             
-                                </ul>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <a id="ropa" href="#" class="toggle-content">👕 Ropa</a>
-                            <div class="showcase-container">
-                                <ul>
-                                    <li>
-                                        <a id="tiendaAmazon" href="https://www.amazon.com/stores/page/5D0B9854-CE0E-4990-84F8-37FB9ED5E659" target="_blank">Tienda Amazon</a>
-                                    </li>     
-                                    <li>
-                                        <a id="catalogo_heartdesigns" href="/catalogos/index.html" target="_blank">Catálogo: HeartDesigns</a>
-                                    </li>                         
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <button class="button button-default accordion" id="produccion-musical">🎧 Producción Musical & Distribución</button>
-                <div class="panel">
-                    <p id="descripcion-produccion-musical">Producción musical, mezcla, distribución y marketing para artistas.</p>
-                    <!-- Este es el carrousel de artistas -->
-                    <ul>
-                        <li>
-                            <a id="artistas" href="#" class="toggle-content" >🎸 Artistas</a>
-                            <div class="showcase-container">
-                                <div class="swiper mySwiper2">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                            <a href="https://open.spotify.com/artist/6xSbwTDdHOAWQVfScq2Jpd?si=asiWLXXuQSa4egE-8LVhKg" target="_blank"><img src="images/artistas/artista-luciernaga.png" alt="Luciérnaga"></a>
-                                            <p id="artist1">Luciérnaga</br> Producción, Distribución, Marketing</p>
-                                        </div>
-                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
-                                            <a href="https://open.spotify.com/artist/1RPm3ux3cK8oTcCyII8HXR?si=h0mkOWdLQO6lzPEbdqh8QQ" target="_blank"><img src="images/artistas/artista-lossmokings.png" alt="Los Smokings"></a>
-                                            <p id="artist2">Los Smokings</br> Distribución, Marketing</p>
-                                        </div>
-                                        <div class="swiper-slide" style="background-color: rgb(173, 186, 241);">
-                                            <img src="images/artistas/artista-rodneyduran.png" alt="Rodney Durán">
-                                            <p id="artist3">Rodney Durán</br> Producción, Distribución, Marketing</p>
-                                        </div>
-                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                            <a href="https://open.spotify.com/artist/4LtR6Bnzu2oWh0wU0ZWbon" target="_blank"><img src="images/artistas/artista-danyfreire.png" alt="Dany Freire"></a>
-                                            <p id="artist4">Dany Freire</br> Producción, Distribución, Marketing</p>
-                                        </div>
-
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </li>
-
-                       <!--  <li>
-                            <a id="libros" href="#" class="toggle-content">📖 Libros</a>
-                            <div class="showcase-container">
-                                <ul>
-                                    <li>
-                                        <a id="chainJournal" href="https://a.co/d/6GkueOL" target="_blank">Chain Journal (Amazon)</a>
-                                    </li>                             
-                                </ul>
-                            </div>
-                        </li>
-                        
-                        <li>
-                            <a id="ropa" href="#" class="toggle-content">👕 Ropa</a>
-                            <div class="showcase-container">
-                                <ul>
-                                    <li>
-                                        <a id="tiendaAmazon" href="https://www.amazon.com/stores/page/5D0B9854-CE0E-4990-84F8-37FB9ED5E659" target="_blank">Tienda Amazon</a>
-                                    </li>     
-                                    <li>
-                                        <a id="catalogo_heartdesigns" href="#" target="_blank">Catálogo: HeartDesigns</a>
-                                    </li>                         
-                                </ul>
-                            </div>
-                        </li> -->
-                    </ul>
-
-                </div>
-                
-                <button class="button button-default accordion" id="web">💻 Desarrollo Web</button>
-                <div class="panel">
-                    <p id="descripcionWeb">
-                        Diseño y desarrollo de sitios web personalizados, optimizados para SEO y velocidad.
-                    </p>
-                    <ul>
-                        <li id="especialidadWeb">🎯 Especializado en landing pages, tarjetas de presentación digital y blogs.</li>
-                        <li id="experienciaWeb">⚡ Experiencia en HTML, CSS, Joomla y herramientas de automatización.</li>
-                        <li id="contactoWeb">📌 Si necesitas una web para tu negocio o proyecto, contáctame.</li>
-                    </ul>
-                
-                                    <!-- Este es el carrousel de websites -->
-                                    <ul>
-                                        <li>
-                                            <a id="websites-proyectos" href="#" class="toggle-content">💻🖥️📱 Websites y proyectos</a>
-                                            <div class="showcase-container">
-                                                <div class="swiper mySwiper3">
-                                                    <div class="swiper-wrapper">
-                                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                                            <img src="images/websites/webmockup1.png" alt="Website Tarjeta de Presentación">
-                                                            <p id="website1">Sitio web tipo tarjeta de presentación</p>
-                                                        </div>
-                                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
-                                                            <img src="images/websites/webmockup2.png" alt="Landing Page">
-                                                            <p id="website2">Landing page para captar clientes</p>
-                                                        </div>
-                                                        <div class="swiper-slide" style="background-color: rgb(173, 186, 241);">
-                                                            <img src="images/websites/webmockup3.png" alt="Portfolio">
-                                                            <p id="website3">Blog o portafolio personal</p>
-                                                        </div>
-                                                        <div class="swiper-slide" style="background-color: rgb(170, 223, 160);">
-                                                            <img src="images/websites/webmockup4.png" alt="Catálogo de Productos">
-                                                            <p id="website4">Catálogo digital para productos o servicios</p>
-                                                        </div>
-                                                        <div class="swiper-slide" style="background-color: rgb(245, 231, 155);">
-                                                            <img src="images/websites/webmockup5.png" alt="Página de Eventos">
-                                                            <p id="website5">Sitio web para eventos y promociones</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-pagination"></div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        
-                                    </ul>
-                
-                </div>
-                
-                <button class="button button-default accordion" id="marketing">📧 Marketing Digital</button>
-<div class="panel">
-    <p id="descripcionMarketing">Convierte tu audiencia en clientes a través de estrategias digitales efectivas</p>
-    <ul>
-        <li id="servicioEmail">📩 <strong>Email Marketing:</strong> Creación y automatización de correos personalizados para mejorar la conversión.</li>
-        <li id="servicioPublicidad">🎯 <strong>Publicidad en Redes Sociales:</strong> Anuncios en Facebook, Instagram y Google Ads segmentados para mayor impacto.</li>
-        <li id="servicioSEO">📊 <strong>SEO y Posicionamiento Web:</strong> Optimización de contenido y estrategias para mejorar la visibilidad en Google.</li>
-        <li id="servicioConversion">🛍️ <strong>Estrategias de Conversión:</strong> Creación de embudos de ventas y optimización de experiencia de usuario.</li>
-    </ul>
-    <p id="ctaMarketing">📌 <strong>¿Listo para mejorar tu presencia digital?</strong> Contáctanos y te ayudamos a crecer con estrategias efectivas.</p>
-</div>
-
-                
-<button class="button button-default accordion" id="creatividad">💡 Creatividad Aplicada</button>
-<div class="panel">
-    <p id="descripcionCreatividad">Estrategias creativas para potenciar marcas y proyectos.</p>
-    <ul>
-        <li id="servicioStorytelling">✍️ <strong>Storytelling:</strong> Creación de narrativas atractivas para marcas y productos.</li>
-        <li id="servicioNaming">🏷️ <strong>Naming:</strong> Desarrollo de nombres originales y memorables para empresas y proyectos.</li>
-        <li id="servicioConsultoria">🎨 <strong>Consultoría Creativa:</strong> Ideas innovadoras para branding, contenido y estrategias de comunicación.</li>
-    </ul>
-    <p id="ctaCreatividad">📌 <strong>¿Necesitas una idea fresca para tu proyecto?</strong> Contáctanos y transformemos juntos tu concepto en algo único.</p>
-</div>
-
-            </div>
-            
-            <!-- Contacto -->
-            <h3 id="contacto">Contacto</h3>
-            <a class="button button-whatsapp" href="https://api.whatsapp.com/send?phone=593992182204&text=Hola!" target="_blank">
-                <img class="icon" src="images/icons/whatsapp.svg" alt="WhatsApp Logo">
-                <span id="whatsapp">WhatsApp</span>
-            </a>
-            <a class="button button-default" href="mailto:dany.freire.b@gmail.com" target="_blank">
-                <img class="icon" aria-hidden="true" src="images/icons/generic-email.svg" alt="Email Icon">
-                <span id="email">Email</span>
-            </a>
-            
-            <a class="button button-guarda-mi-contacto" href="/files/danyfreire.vcf" target="_blank">
-                <img class="icon" aria-hidden="true" src="images/icons/littlelink.svg" alt="Guarda mi contacto icon">
-                <span id="guardar">Guarda mi contacto</span>
-            </a>
-            
-            <div class="qr-container">
-                <p id="escanea">Escanea mi contacto:</p>
-                <img class="qr-image" src="images/qr-vcard.png" alt="Código QR vCard">
-            </div>
-            
-            <footer>
-                <p>© 2026 Palozebra by <a href="https://palozebra.com">Dany Freire</a></p>
-            </footer>
-        </div>
+  <header class="site-header wrap">
+    <a class="brand-mini" href="#top" aria-label="Palozebra, inicio">
+      <img src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="Palozebra Creative">
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#que-hacemos" data-es="Qué hacemos" data-en="What we do">Qué hacemos</a>
+      <a href="projects/" data-es="Proyectos" data-en="Projects">Proyectos</a>
+      <a href="https://92928080.xyz" target="_blank" rel="noopener" data-es="Creative Lab ↗" data-en="Creative Lab ↗">Creative Lab ↗</a>
+      <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+    </nav>
+    <div class="lang" aria-label="Idioma">
+      <button type="button" data-lang="es" class="active">ES</button>
+      <button type="button" data-lang="en">EN</button>
     </div>
-    
-    <script src="lang.js"></script>
-    <script src="accordion.js"></script>
-    <!-- SwiperJS Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-    var swiper = new Swiper(".mySwiper", {
-        effect: "cards",
-        grabCursor: true,
-    });
-    var swiper = new Swiper(".mySwiper2", {
-        effect: "cards",
-        grabCursor: true,
-    });
-    var swiper = new Swiper(".mySwiper3", {
-        effect: "cards",
-        grabCursor: true,
-    });
-    
-    </script>
+  </header>
 
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-logo">
+        <img src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="Palozebra Creative">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow" data-es="Estudio creativo · Guayaquil" data-en="Creative studio · Guayaquil">Estudio creativo · Guayaquil</p>
+        <h1>
+          <span data-es="Ideas + tecnología" data-en="Ideas + technology">Ideas + tecnología</span><br>
+          <span class="accent-green" data-es="para hacer" data-en="to make">para hacer</span><br>
+          <span class="accent-gradient" data-es="mejor las cosas." data-en="things better.">mejor las cosas.</span>
+        </h1>
+        <p class="lead" data-es="Ayudamos a empresas a trabajar, vender y crear mejor usando diseño, tecnología, automatización e inteligencia artificial." data-en="We help businesses work, sell and create better using design, technology, automation and artificial intelligence.">Ayudamos a empresas a trabajar, vender y crear mejor usando diseño, tecnología, automatización e inteligencia artificial.</p>
+        <a class="cta" href="https://api.whatsapp.com/send?phone=593992182204&text=Hola%20Palozebra%2C%20quiero%20contarte%20algo%20que%20quiero%20resolver." target="_blank" rel="noopener">
+          <span data-es="Cuéntame qué quieres resolver" data-en="Tell me what you want to solve">Cuéntame qué quieres resolver</span><span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="hero-lines" aria-hidden="true"></div>
+    </section>
+
+    <section id="que-hacemos" class="section wrap services">
+      <div class="section-intro">
+        <p class="section-no">02</p>
+        <h2 data-es="Empecemos por el problema." data-en="Start with the problem.">Empecemos <span class="accent-green">por el problema.</span></h2>
+        <p data-es="No necesitas saber qué tecnología necesitas. Cuéntanos qué quieres mejorar y encontramos el camino." data-en="You don't need to know which technology you need. Tell us what you want to improve and we'll find the path.">No necesitas saber qué tecnología necesitas. Cuéntanos qué quieres mejorar y encontramos el camino.</p>
+      </div>
+      <div class="service-grid">
+        <article><span class="service-mark">✦</span><h3 data-es="Diseño" data-en="Design">Diseño</h3><p data-es="Identidad, contenido y experiencias que comunican." data-en="Identity, content and experiences that communicate.">Identidad, contenido y experiencias que comunican.</p></article>
+        <article><span class="service-mark">▱</span><h3>Web</h3><p data-es="Sitios y experiencias digitales rápidas, claras y funcionales." data-en="Fast, clear and functional digital experiences.">Sitios y experiencias digitales rápidas, claras y funcionales.</p></article>
+        <article><span class="service-mark">⚡</span><h3 data-es="Automatización" data-en="Automation">Automatización</h3><p data-es="Procesos conectados que reducen trabajo repetitivo." data-en="Connected processes that reduce repetitive work.">Procesos conectados que reducen trabajo repetitivo.</p></article>
+        <article><span class="service-mark">◎</span><h3 data-es="Inteligencia Artificial" data-en="Artificial Intelligence">Inteligencia Artificial</h3><p data-es="IA aplicada a problemas reales, con sentido y valor." data-en="AI applied to real problems, with purpose and value.">IA aplicada a problemas reales, con sentido y valor.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap featured" id="proyecto">
+      <div class="featured-copy">
+        <p class="section-no">03</p>
+        <p class="eyebrow accent-green" data-es="Proyecto destacado" data-en="Featured project">Proyecto destacado</p>
+        <h2 data-es="Contratos que puedes conversar." data-en="Contracts you can talk to.">Contratos que puedes conversar.</h2>
+        <p data-es="Una herramienta para convertir documentos complejos en información que puedes consultar y entender." data-en="A tool that turns complex documents into information you can query and understand.">Una herramienta para convertir documentos complejos en información que puedes consultar y entender.</p>
+        <a class="text-link" href="projects/" data-es="Ver proyectos →" data-en="View projects →">Ver proyectos →</a>
+      </div>
+      <div class="project-demo" aria-label="Ejemplo visual de consulta de contrato">
+        <div class="doc-stack" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="chat-demo">
+          <div class="bubble question" data-es="¿Cuál es la duración del contrato?" data-en="How long is the contract?">¿Cuál es la duración del contrato?</div>
+          <div class="bubble answer" data-es="La duración del contrato es de 24 meses a partir de la fecha de firma." data-en="The contract lasts 24 months from the signing date.">La duración del contrato es de 24 meses a partir de la fecha de firma.</div>
+          <div class="bubble question" data-es="¿Qué pasa si alguna parte incumple?" data-en="What happens if one party defaults?">¿Qué pasa si alguna parte incumple?</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact wrap">
+      <div>
+        <p class="section-no">04</p>
+        <h2 data-es="¿Qué quieres resolver?" data-en="What do you want to solve?">¿Qué quieres <span class="accent-gradient">resolver?</span></h2>
+        <p data-es="Cuéntame qué estás intentando hacer. Te responderé personalmente." data-en="Tell me what you're trying to do. I'll reply personally.">Cuéntame qué estás intentando hacer. Te responderé personalmente.</p>
+      </div>
+      <a class="cta cta-solid" href="https://api.whatsapp.com/send?phone=593992182204&text=Hola%20Palozebra%2C%20quiero%20contarte%20algo%20que%20quiero%20resolver." target="_blank" rel="noopener">
+        <span data-es="Hablemos por WhatsApp" data-en="Let's talk on WhatsApp">Hablemos por WhatsApp</span><span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <img class="footer-logo" src="images/avatar.png" srcset="images/avatar@2x.png 2x" alt="Palozebra Creative">
+    <div class="footer-links">
+      <a href="projects/" data-es="Proyectos" data-en="Projects">Proyectos</a>
+      <a href="https://92928080.xyz" target="_blank" rel="noopener">Creative Lab ↗</a>
+      <a href="https://www.linkedin.com/in/dany-freire-bonifacini/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/danyfreire" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:dany.freire.b@gmail.com">dany.freire.b@gmail.com</a>
+      <span>Guayaquil, Ecuador</span>
+    </div>
+    <p class="copyright">© 2026 Palozebra</p>
+  </footer>
+
+  <script>
+    const langButtons = document.querySelectorAll('[data-lang]');
+    const translatable = document.querySelectorAll('[data-es][data-en]');
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      translatable.forEach(el => { el.textContent = el.dataset[lang]; });
+      langButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+      localStorage.setItem('palozebra-lang', lang);
+    }
+    langButtons.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+    const saved = localStorage.getItem('palozebra-lang');
+    const initial = saved || (navigator.language || 'es').toLowerCase().startsWith('en') ? (saved || 'en') : 'es';
+    setLang(initial === 'en' ? 'en' : 'es');
+  </script>
 </body>
-
 </html>
