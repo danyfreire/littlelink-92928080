@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caso 01 · Consultoría asistida por IA | Palozebra</title>
+<meta name="description" content="Caso demostrativo de AI Operations: convertir una descripción desestructurada de un problema en diagnóstico, preguntas de discovery y un siguiente paso accionable.">
+<link rel="icon" href="../../../images/avatar.png">
+<link rel="stylesheet" href="../../../css/reset.css">
+<link rel="stylesheet" href="../../../css/palozebra-home.css">
+<style>
+.case-hero{padding:78px 0 46px;border-bottom:1px solid var(--line)}
+.back{display:inline-block;margin-bottom:34px;font-size:.88rem}
+.case-hero h1{font-size:clamp(2.8rem,7vw,5.8rem);letter-spacing:-.055em;line-height:.96;margin:0 0 18px}
+.case-sub{font-size:clamp(1.2rem,2.3vw,1.8rem);max-width:850px;margin:0 0 22px}
+.meta{display:flex;gap:10px;flex-wrap:wrap}.meta span{border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:.78rem;color:var(--muted)}
+.explain{display:grid;grid-template-columns:1fr 1.35fr;gap:70px;padding:54px 0;border-bottom:1px solid var(--line)}
+.explain h2,.demo h2,.how h2{font-size:clamp(1.8rem,3vw,2.8rem);letter-spacing:-.035em;margin:0}
+.explain p,.how p{color:var(--muted);line-height:1.7;margin:0 0 16px}
+.flow-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.flow-mini div{border:1px solid var(--line);border-radius:14px;padding:16px;font-size:.9rem;line-height:1.45}
+.flow-mini strong{display:block;margin-bottom:5px}
+.demo{padding:54px 0;border-bottom:1px solid var(--line)}
+.demo-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;margin-top:28px;align-items:start}
+.demo-copy p{color:var(--muted);line-height:1.7}
+.examples{display:grid;gap:10px;margin-top:18px}
+.example{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:12px;padding:13px 14px;font:inherit;cursor:pointer;color:inherit}
+.example:hover{border-color:var(--green)}
+.demo-form{border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff}
+.demo-form label{display:block;font-weight:700;margin-bottom:10px}
+.demo-form textarea{width:100%;min-height:170px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:15px;font:inherit;line-height:1.55;color:inherit;background:#fff}
+.demo-form textarea:focus{outline:2px solid color-mix(in srgb,var(--green) 35%,transparent);border-color:var(--green)}
+.form-note{font-size:.78rem;color:var(--muted);line-height:1.5;margin:10px 0 16px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:13px 19px;background:#111;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+.btn[disabled]{opacity:.55;cursor:wait}
+.status{margin-top:14px;color:var(--muted);font-size:.9rem}
+.result-wrap{display:none;margin-top:28px}
+.result-wrap.show{display:block}
+.result-card{border:1px solid var(--line);border-radius:18px;padding:20px;background:#fff;margin-bottom:14px}
+.result-card h3{margin:0 0 8px;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.result-card .lead{font-size:1.15rem;font-weight:700;line-height:1.55}
+.result-card ul{margin:0;padding-left:20px;line-height:1.6}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.result-card.next{background:#f4f9f7}.result-card.risk{background:#fff7f4}
+.how{padding:54px 0 80px}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.disclaimer{border-left:3px solid var(--green);padding-left:16px}
+@media(max-width:900px){.explain,.demo-grid,.how-grid{grid-template-columns:1fr;gap:24px}.flow-mini{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.case-hero{padding-top:48px}.flow-mini,.result-grid{grid-template-columns:1fr}.demo-form{padding:16px}}
+</style>
+</head>
+<body>
+<header class="site-header wrap">
+<a class="brand-mini" href="../../../" aria-label="Palozebra, inicio"><img src="../../../images/avatar.png" srcset="../../../images/avatar@2x.png 2x" alt="Palozebra Creative"></a>
+<nav class="nav" aria-label="Principal"><a href="../../../#que-hacemos">Qué hacemos</a><a href="../../" class="accent-green">Proyectos</a><a href="https://92928080.xyz" target="_blank" rel="noopener">Creative Lab ↗</a><a href="../../../#contacto">Contacto</a></nav>
+</header>
+<main>
+<section class="case-hero wrap">
+<a class="back text-link" href="../">← AI Operations</a>
+<p class="eyebrow accent-green">Caso 01 · Demo interactivo</p>
+<h1>Consultoría asistida por IA</h1>
+<p class="case-sub">De una descripción desestructurada a un diagnóstico y un siguiente paso accionable.</p>
+<div class="meta"><span>Consultoría</span><span>Agentes de IA</span><span>Discovery</span><span>AI Operations</span><span>2026</span></div>
+</section>
+
+<section class="explain wrap">
+<div>
+<p class="eyebrow">El caso</p>
+<h2>La IA prepara. El consultor decide.</h2>
+</div>
+<div>
+<p>Una empresa de consultoría recibe problemas y oportunidades descritos por sus clientes en lenguaje natural. Antes de una conversación útil, alguien debe ordenar el caso, identificar su impacto, detectar qué información falta y decidir qué preguntar después.</p>
+<p>Este demo muestra cómo dos agentes de IA pueden preparar ese trabajo inicial para que el consultor llegue con mejor contexto. No reemplaza el diagnóstico profesional ni toma decisiones por la persona.</p>
+<div class="flow-mini">
+<div><strong>1 · Caso</strong>El cliente describe una situación real.</div>
+<div><strong>2 · Diagnóstico</strong>La IA estructura problema, impacto y prioridad.</div>
+<div><strong>3 · Discovery</strong>La IA prepara preguntas y un siguiente paso.</div>
+<div><strong>4 · Acción humana</strong>El consultor revisa, valida y decide.</div>
+</div>
+</div>
+</section>
+
+<section class="demo wrap">
+<p class="eyebrow accent-green">Prueba el concepto</p>
+<h2>Actúa como si fueras el cliente de una consultora.</h2>
+<div class="demo-grid">
+<div class="demo-copy">
+<p>Escribe una situación que un cliente podría plantear. La IA no intentará “resolverla mágicamente”: preparará una primera lectura para apoyar el trabajo del consultor.</p>
+<p><strong>También puedes cargar uno de estos ejemplos:</strong></p>
+<div class="examples">
+<button class="example" type="button">Estamos perdiendo leads porque respondemos tarde por WhatsApp.</button>
+<button class="example" type="button">Nuestro inventario físico no coincide con el sistema y lo descubrimos al despachar.</button>
+<button class="example" type="button">El reporte gerencial tarda varios días porque consolidamos información manualmente en Excel.</button>
+</div>
+</div>
+<div>
+<form class="demo-form" id="demo-form">
+<label for="caso">Situación planteada por el cliente</label>
+<textarea id="caso" name="caso" maxlength="2000" required placeholder="Ej.: Tenemos cuatro proyectos y consolidamos avances manualmente desde Excel y WhatsApp."></textarea>
+<p class="form-note">Demo experimental. No incluyas información confidencial, datos personales ni información sensible de tu empresa.</p>
+<button class="btn" id="submit" type="submit">Generar lectura inicial</button>
+<p class="status" id="status" aria-live="polite"></p>
+</form>
+<div class="result-wrap" id="results">
+<div class="result-card"><h3>Respuesta sugerida</h3><div class="lead" id="respuesta"></div></div>
+<div class="result-card"><h3>Preguntas de discovery</h3><ul id="preguntas"></ul></div>
+<div class="result-grid">
+<div class="result-card next"><h3>Siguiente paso</h3><div id="siguiente"></div></div>
+<div class="result-card risk"><h3>Riesgo si no se actúa</h3><div id="riesgo"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="how wrap">
+<div class="how-grid">
+<div>
+<p class="eyebrow">Qué ocurrió detrás</p>
+<h2>Dos agentes, una preparación estructurada.</h2>
+<p>El primer agente interpreta el caso y organiza problema, impacto, información faltante y prioridad. El segundo usa ese diagnóstico para preparar preguntas de discovery, una respuesta consultiva y un siguiente paso verificable.</p>
+</div>
+<div class="disclaimer">
+<p class="eyebrow accent-green">Qué problema resuelve</p>
+<p>Reduce el trabajo de primera lectura y preparación que normalmente ocurre antes de una reunión o análisis. La salida sirve como insumo para el consultor, no como sustituto de su criterio.</p>
+<p><strong>Patrón:</strong> información desestructurada → contexto accionable → decisión humana.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="wrap footer">
+<img class="footer-logo" src="../../../images/avatar.png" srcset="../../../images/avatar@2x.png 2x" alt="Palozebra Creative">
+<div class="footer-links"><a href="../../">Proyectos</a><a href="https://92928080.xyz" target="_blank" rel="noopener">Creative Lab ↗</a><a href="https://github.com/danyfreire" target="_blank" rel="noopener">GitHub</a></div>
+<div class="footer-contact"><a href="mailto:info@palozebra.com">info@palozebra.com</a><span>Guayaquil, Ecuador</span></div>
+<p class="copyright">© 2026 Palozebra</p>
+</footer>
+<script>
+const API='https://caso01.197832.xyz/diagnostico';
+const form=document.getElementById('demo-form');
+const text=document.getElementById('caso');
+const status=document.getElementById('status');
+const submit=document.getElementById('submit');
+const results=document.getElementById('results');
+document.querySelectorAll('.example').forEach(b=>b.addEventListener('click',()=>{text.value=b.textContent.trim();text.focus();}));
+form.addEventListener('submit',async e=>{
+ e.preventDefault();
+ const caso=text.value.trim();
+ if(!caso)return;
+ submit.disabled=true; results.classList.remove('show');
+ const steps=['Agente 1 · estructurando el diagnóstico…','Agente 1 · identificando impacto e información faltante…','Agente 2 · preparando preguntas de discovery…','Agente 2 · definiendo siguiente paso y riesgo…'];
+ let step=0; status.textContent=steps[0]; const ticker=setInterval(()=>{step=Math.min(step+1,steps.length-1);status.textContent=steps[step]},3500);
+ try{
+  const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({caso})});
+  const d=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(d.error||'No se pudo procesar el caso.');
+  document.getElementById('respuesta').textContent=d.respuesta_sugerida||'';
+  const ul=document.getElementById('preguntas');ul.innerHTML='';
+  (d.preguntas_discovery||[]).forEach(q=>{const li=document.createElement('li');li.textContent=q;ul.appendChild(li)});
+  document.getElementById('siguiente').textContent=d.siguiente_paso||'';
+  document.getElementById('riesgo').textContent=d.riesgo_si_no_se_actua||'';
+  results.classList.add('show'); status.textContent='Lectura inicial preparada.';
+  results.scrollIntoView({behavior:'smooth',block:'start'});
+ }catch(err){status.textContent='No pudimos completar la demo en este momento. Intenta nuevamente.';}
+ finally{clearInterval(ticker);submit.disabled=false;}
+});
+</script>
+</body></html>
