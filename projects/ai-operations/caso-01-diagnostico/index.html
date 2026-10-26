@@ -145,7 +145,7 @@ form.addEventListener('submit',async e=>{
  e.preventDefault();
  const caso=text.value.trim();
  if(!caso)return;
- submit.disabled=true; results.classList.remove('show');
+ submit.disabled=true; results.classList.remove('show'); if(window.pzTrack) pzTrack('demo_start');
  const steps=['Agente 1 · estructurando el diagnóstico…','Agente 1 · identificando impacto e información faltante…','Agente 2 · preparando preguntas de discovery…','Agente 2 · definiendo siguiente paso y riesgo…'];
  let step=0; status.textContent=steps[0]; const ticker=setInterval(()=>{step=Math.min(step+1,steps.length-1);status.textContent=steps[step]},3500);
  try{
@@ -157,10 +157,10 @@ form.addEventListener('submit',async e=>{
   (d.preguntas_discovery||[]).forEach(q=>{const li=document.createElement('li');li.textContent=q;ul.appendChild(li)});
   document.getElementById('siguiente').textContent=d.siguiente_paso||'';
   document.getElementById('riesgo').textContent=d.riesgo_si_no_se_actua||'';
-  results.classList.add('show'); status.textContent='Lectura inicial preparada.';
+  results.classList.add('show'); status.textContent='Lectura inicial preparada.'; if(window.pzTrack) pzTrack('demo_success');
   results.scrollIntoView({behavior:'smooth',block:'start'});
- }catch(err){status.textContent='No pudimos completar la demo en este momento. Intenta nuevamente.';}
+ }catch(err){status.textContent='No pudimos completar la demo en este momento. Intenta nuevamente.'; if(window.pzTrack) pzTrack('demo_error');}
  finally{clearInterval(ticker);submit.disabled=false;}
 });
 </script>
-</body></html>
+<script src="/js/palozebra-analytics.js" defer></script></body></html>
